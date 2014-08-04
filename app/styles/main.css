@@ -1,0 +1,251 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #FCFFF5;
+    /*overflow:hidden;*/
+}
+
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-font {
+
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* main */
+/* Supporting marketing content */
+.main {
+    margin: 10px 0;
+}
+
+.main p + h4 {
+    margin-top: 28px;
+}
+
+.main > div {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
+    -webkit-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
+}
+
+.main ul {
+    list-style: none;
+}
+
+/* common */
+.side-tag {
+    font-size: 3em;
+}
+
+/* */
+.intro {
+    background-color: #193441;
+    color: #FCFFF5;
+    padding-bottom: 50px !important;
+}
+
+.intro ul {
+    font-size: 1.1em;
+    padding: 15px;
+    padding-left: 30px;
+}
+
+.intro ul li {
+    padding-bottom: 10px;
+}
+
+.my-github {
+    display: inline-block;
+    float: right;
+}
+
+.category {
+    background-color: #3E606F;
+    color: #D1DBBD;
+}
+
+.category ul {
+    font-size: 1.6em;
+    padding: 15px;
+    padding-left: 50px;
+    list-style: circle;
+}
+
+.category ul li {
+    color: #FCFFF5;
+    padding-bottom: 10px;
+
+}
+
+.category ul li span {
+    cursor: pointer;
+}
+
+.category-content {
+    height: 700px;
+    background-color: #91AA9D;
+    color: #3E606F;
+}
+
+.facebook-content {
+    background-color: #D1DBBD;
+    color: #193441;
+    padding-bottom: 40px;
+}
+
+.category-content .side-tag {
+    display: none;
+}
+
+.facebook-content .side-tag {
+    display: none;
+}
+
+.fb-comments, .fb-comments span, .fb-comments iframe {
+    width: 100% !important;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+/* Test */
+.planet {
+    background-color: #000;
+    border-radius: 1000px;
+    height: 2000px;
+    position: fixed;
+    width: 2000px;
+    z-index: 5;
+}
+
+.sun {
+    display: block;
+    background-color: yellow;
+    border-radius: 100px;
+    box-shadow: 0px 0px 30px yellow;
+    height: 200px;
+    position: fixed;
+    width: 200px;
+    z-index: -200;
+    top: 5%;
+    left: 10%;
+}
+
+.rainy-weather {
+    margin: 3em auto;
+    width: 350px;
+    height: 400px;
+    position: relative;
+}
+
+.cloud-main {
+    width: 430px;
+    height: 130px;
+    background: #f2f2f2;
+    border-radius: 100em;
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    background: #F2F2F2;
+}
+
+.cloud-center {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: #F2F2F2;
+    position: absolute;
+    border-radius: 200em;
+    top: -30px;
+    right: -20px;
+}
+
+.cloud-left {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    background: #F2F2F2;
+    position: absolute;
+    border-radius: 100em;
+    top: 0;
+    right: 160px;
+}

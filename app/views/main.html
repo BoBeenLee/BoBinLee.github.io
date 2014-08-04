@@ -1,0 +1,49 @@
+<div class="row main page-set" ng-init="init()">
+    <!--<div class="rainy-weather">-->
+    <!--<div class="cloud-main"></div>-->
+    <!--<div class="cloud-center"></div>-->
+    <!--<div class="cloud-left"></div>-->
+    <!--<div class="sun" data-stellar-ratio="0.8" data-stellar-horizontal-offset="0"></div>-->
+    <!--</div>-->
+    <!--<div class="planet" style="left: -650px; top: 559.5px;" data-stellar-ratio="0.57" data-stellar-horizontal-offset="0"></div>-->
+    <div class="intro page">
+        <span class="side-tag">About Me</span>
+        <div class="my-github">
+            <iframe src="http://lab.lepture.com/github-cards/card.html?user=BoBinLee" frameborder="0" scrolling="0" width="400" height="120" allowtransparency></iframe>
+            <div>
+                <h3>Contact at</h3>
+                <a href="mailto:cultist_tp@naver.com">cultist_tp@naver.com</a>
+            </div>
+        </div>
+        <ul>
+            <li><span>숭문고등학교 졸업</span></li>
+            <li><span>소프트웨어관리병 전역</span></li>
+            <li><span>성공회대학교 재학중</span></li>
+        </ul>
+    </div>
+    <div class="category page">
+        <span class="side-tag">Category</span>
+        <ul>
+            <li ng-repeat="content in contents"><span ng-click="setContent($index)">{{ content.name }}</span></li>
+        </ul>
+    </div>
+    <div class="category-content page">
+        <span class="side-tag">Content</span>
+        <div ng-include src="content.url">
+        </div>
+    </div>
+    <div class="facebook-content page">
+        <span class="side-tag">SNS</span>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=154374664667119&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <div class="fb-comments" data-href="https://github.com/BoBinLee" data-width="100%" data-numposts="5"
+             data-colorscheme="light"></div>
+    </div>
+</div>
