@@ -25,7 +25,7 @@ angular.module('meanstackApp')
                     return '<span class="sausage-span">' + $page.find('.side-tag').first().text() + '</span>';
                 }
             });
-          //  alert(jQuery(".category-content").html());
+            //  alert(jQuery(".category-content").html());
         };
 
         $scope.setContent = function(index){
