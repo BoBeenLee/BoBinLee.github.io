@@ -147,6 +147,7 @@ body {
 .category-content {
     background-color: #91AA9D;
     color: #3E606F;
+    min-height: 600px;
 }
 
 .zoom {
