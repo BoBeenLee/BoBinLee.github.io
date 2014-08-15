@@ -5,8 +5,33 @@
     <title></title>
 </head>
 <body>
-    Competition !!
-
-    <img src="/images/competition/1.png" alt="image" class="img-rounded" width="650px" />
+<div class="competition" ng-controller="CompetitionCtrl">
+    <div class="competition-tag">경진대회시스템</div>
+    <hr>
+    <div class="competition-slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <!--<li>-->
+                <!--<img class="img-rounded" src="/images/competition/1.png" alt="image" width="650"/>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<img class="img-rounded" src="/images/competition/1.png" alt="image" width="650"/>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<img class="img-rounded" src="/images/competition/1.png" alt="image" width="650"/>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<img class="img-rounded" src="/images/competition/1.png" alt="image" width="650"/>-->
+                <!--</li>-->
+                <li ng-repeat="image in images">
+                    <div class="zoom">
+                        {{ refresh($last) }}
+                        <img class="img-rounded" src="/images/competition/{{ image }}" alt="image"/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>

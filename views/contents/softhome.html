@@ -5,7 +5,33 @@
     <title></title>
 </head>
 <body>
-    SoftHome !!
-    <img src="/images/softhome/1.png" alt="image" class="img-rounded" width="700px" />
+<div class="softhome" ng-controller="SoftHomeCtrl">
+    <div class="softhome-tag">학과 홈페이지</div>
+    <hr>
+    <div class="softhome-slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <!--<li>-->
+                <!--<img class="img-rounded" src="/images/competition/1.png" alt="image" width="650"/>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<img class="img-rounded" src="/images/competition/1.png" alt="image" width="650"/>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<img class="img-rounded" src="/images/competition/1.png" alt="image" width="650"/>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<img class="img-rounded" src="/images/competition/1.png" alt="image" width="650"/>-->
+                <!--</li>-->
+                <li ng-repeat="image in images">
+                    <div class="zoom">
+                        {{ refresh($last) }}
+                        <img class="img-rounded zoom" src="/images/softhome/{{ image }}" alt="image"/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>

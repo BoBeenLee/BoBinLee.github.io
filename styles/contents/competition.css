@@ -1,0 +1,17 @@
+.competition {
+
+}
+
+.competition-tag {
+    font-size: 2em;
+    text-align: center;
+}
+
+.competition-slider {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.competition-slider img {
+    height: 550px;
+}

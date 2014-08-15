@@ -98,6 +98,10 @@ body {
     font-size: 3em;
 }
 
+.default-size {
+    font-size: 1.1em;
+}
+
 /* */
 .intro {
     background-color: #193441;
@@ -106,7 +110,6 @@ body {
 }
 
 .intro ul {
-    font-size: 1.1em;
     padding: 15px;
     padding-left: 30px;
 }
@@ -126,7 +129,6 @@ body {
 }
 
 .category ul {
-    font-size: 1.6em;
     padding: 15px;
     padding-left: 50px;
     list-style: circle;
@@ -143,9 +145,13 @@ body {
 }
 
 .category-content {
-    height: 700px;
     background-color: #91AA9D;
     color: #3E606F;
+}
+
+.zoom {
+    display:inline-block;
+    position: relative;
 }
 
 .facebook-content {
@@ -248,4 +254,9 @@ body {
     border-radius: 100em;
     top: 0;
     right: 160px;
+}
+
+.zoom img {
+    display: block;
+    background-color: #00b3ee;
 }
