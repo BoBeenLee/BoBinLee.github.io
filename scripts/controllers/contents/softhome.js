@@ -27,7 +27,7 @@ angular.module('meanstackApp')
             if (last) {
                 $('.flexslider').flexslider({
                     animation: "slide",
-
+                    animationLoop: false
                 });
                 // zoom
                 $('.zoom').zoom({
