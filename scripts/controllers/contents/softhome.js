@@ -10,14 +10,13 @@
 angular.module('meanstackApp')
     .controller('SoftHomeCtrl', function ($scope) {
         $scope.images = [
-            '1.png',
-            '2.png',
-            '3.png',
-            '4.png',
-            '5.png',
-            '6.png',
-            '7.png',
-            '8.png'
+            'main.png',
+            'progress.png',
+            'qnabrd.png',
+            'pics.png',
+            'write.png',
+            'read.png',
+            'mailbox.png'
         ];
 
         $scope.init = function () {
@@ -27,7 +26,8 @@ angular.module('meanstackApp')
             if (last) {
                 $('.flexslider').flexslider({
                     animation: "slide",
-                    animationLoop: false
+                    animationLoop: false,
+                    smoothHeight: true
                 });
                 // zoom
                 $('.zoom').zoom({

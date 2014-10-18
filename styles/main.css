@@ -12,17 +12,11 @@ body {
     font-family: 'Nanum Gothic', sans-serif;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 /* Custom page header */
 .header {
     border-bottom: 1px solid #e5e5e5;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -55,19 +49,7 @@ body {
     margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
-
 /* main */
-/* Supporting marketing content */
 .main {
     margin: 10px 0;
 }
@@ -111,23 +93,37 @@ body {
 }
 
 .intro .intro-content {
-    height: 400px;
-    padding: 15px;
-    padding-left: 30px;
+    display: inline-block;
 }
 
-.hobby-tag div {
-   margin-top: 15px;
+.intro .intro-content p {
+    padding: 15px;
+    font-size: 17px;
 }
 
 .my-github {
-    display: inline-block;
-    float: right;
+    padding-top: 40px;
+    padding-left: 15px;
 }
 
 .contact {
     padding-top: 10px;
 }
+
+.hobby-tag > div {
+    padding: 15px;
+}
+
+.hobby-tag div > div {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.hobby-tag div > div a {
+    margin-right: 5px;
+}
+
 
 /************** RESSUME ***************/
 
@@ -183,7 +179,7 @@ body {
 }
 
 .portfolio .zoom {
-    display:inline-block;
+    display: inline-block;
     position: relative;
 }
 

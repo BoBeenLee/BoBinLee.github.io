@@ -8,10 +8,10 @@
 }
 
 .house-slider {
-    width: 550px;
+    width: 40%;
     margin: 0 auto;
 }
 
 .house-slider img {
-    height: 420px;
+    height: auto;
 }

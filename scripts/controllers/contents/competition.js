@@ -10,10 +10,10 @@
 angular.module('meanstackApp')
     .controller('CompetitionCtrl', function ($scope) {
         $scope.images = [
-            '1.png',
-            '2.png',
-            '3.png',
-            '4.png'
+            'main.png',
+            'board.png',
+            'system.png',
+            'team.png'
         ];
 
         $scope.init = function () { }
@@ -22,7 +22,8 @@ angular.module('meanstackApp')
             if (last) {
                 $('.flexslider').flexslider({
                     animation: "slide",
-                    animationLoop: false
+                    animationLoop: false,
+                    smoothHeight: true
                 });
                 // zoom
                 $('.zoom').zoom({

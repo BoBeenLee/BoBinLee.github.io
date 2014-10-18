@@ -8,10 +8,10 @@
 }
 
 .softhome-slider {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
 }
 
 .softhome-slider img {
-    height: 420px;
+    height: auto;
 }

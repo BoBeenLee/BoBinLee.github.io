@@ -10,14 +10,15 @@
 angular.module('meanstackApp')
     .controller('HouseCtrl', function ($scope) {
         $scope.images = [
-            '1.png',
-            '2.png',
-            '3.png',
-            '4.png',
-            '5.png',
-            '6.png',
-            '7.png',
-            '8.png'
+            'main.png',
+            'list.png',
+            'write1.png',
+            'write2.png',
+            'write3.png',
+            'read1.png',
+            'read2.png',
+            'mypage.png',
+            'setting.png'
         ];
 
         $scope.init = function () {

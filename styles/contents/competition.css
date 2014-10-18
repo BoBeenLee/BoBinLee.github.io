@@ -8,10 +8,10 @@
 }
 
 .competition-slider {
-    width: 650px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .competition-slider img {
-    height: 550px;
+    height: auto;
 }
