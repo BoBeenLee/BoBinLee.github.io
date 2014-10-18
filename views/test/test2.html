@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script id="data" type="text/html"
+            src="https://www.tistory.com/apis/blog/info?access_token=75d973cacecde72b51426de12c5ae253_bec7bdc0591cf42d9df68dba062d0388&output=json"></script>
+</head>
+<body>
+<h1>
+    jQuery: Scripts Tags And Text(), HTML(), and Contents()
+</h1>
+<!-- This is where the contents of script will be output. -->
+<p>
+    TEXT: <span id="text-output"> ... </span>
+</p>
+
+<p>
+    HTML: <span id="html-output"> ... </span>
+</p>
+
+<p>
+    CONTENTS (TEXT): <span id="contents-text-output"> ... </span>
+</p>
+
+<p>
+    CONTENTS (HTML): <span id="contents-html-output"> ... </span>
+</p>
+
+</body>
+
+<script type="text/javascript">
+    // When the DOM is ready, init scripts.
+    jQuery(function ($) {
+        // Get a reference to our Script tag.
+        var script = $("#data");
+
+        // Get a reference to our output tags.
+        var textOutput = $("#text-output");
+        var htmlOutput = $("#html-output");
+        var contentsTextOutput = $("#contents-text-output");
+        var contentsHtmlOutput = $("#contents-html-output");
+
+        // Use the various approachs to output the contents
+        // of the Script tag to the document.
+        // Text.
+        textOutput.text(script.text());
+
+        // Html.
+        htmlOutput.text(script.html());
+
+        // Contents - Text.
+        contentsTextOutput.text(script.contents().text());
+
+        // Contents - Html.
+        contentsHtmlOutput.text(script.contents().html());
+
+    });
+</script>
+</html>

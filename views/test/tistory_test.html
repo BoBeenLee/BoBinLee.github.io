@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript"
+            src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+
+    <script type="text/javascript">
+        if (window.location.hash) {
+            alert(window.location.hash.substring(1));
+        }
+
+        angular.module("myapp", [])
+                .controller("MyController", function ($scope, $http) {
+//                $scope.data = "hello";
+                    $scope.getToken = function () {
+                        var reqPo = {"client_id": "2e9ed0c88441f79c35f62149e70a990a",
+                            "redirect_uri": "http://localhost:9000/views/tistory_test.html",
+                            "response_type": "token"
+                        };
+//                    $scope.data = "https://www.tistory.com/oauth/authorize?" + JSON.stringify(reqPo);
+// ?client_id=2e9ed0c88441f79c35f62149e70a990a&redirect_uri=http://localhost:9000/views/get_token.html&response_type=token
+                        $scope.data = "https://www.tistory.com/oauth/authorize?" + $.param(reqPo);
+
+                        var responsePromise = $http.jsonp("https://www.tistory.com/oauth/authorize?" + $.param(reqPo));
+                        responsePromise.success(function (data, status, headers, config) {
+                            alert(data);
+                        });
+                        responsePromise.error(function (data, status, headers, config) {
+                            alert(status);
+                            alert("AJAX failed!");
+                        });
+
+
+//                    $http.jsonp("http://angularjs.org/greet.php?callback=JSON_CALLBACK&name=Super%20Hero").
+//                            success(function (data) {
+//                                alert(data);
+//                            }).
+//                            error(function (data) {
+//                                $scope.data = "Request failed";
+//                            });
+                    }
+
+                    function jsonpCallback(data){
+                        alert(data);
+                    }
+
+                    $scope.blogJson = function () {
+                        var url = "https://www.tistory.com/apis/blog/info?";
+                        var token = "f76a2dc9597c1dda11ba62b329df8a88_17a5b584d48c8b86b0886ce16f0ff632";
+
+                        var reqPo = {access_token: token, output: "json"};
+
+                        $scope.data = url + $.param(reqPo);
+
+                        $.ajax({
+                            url :  url,
+                            data : reqPo,
+                            type: 'GET',
+                            jsonpCallback: 'jsonpCallback',
+                            dataType :'jsonp',
+                            success : function(data){
+                                alert(data);
+                              //  alert(data);
+//                                alert("success");
+                            },
+                            error: function(xhr, status, error) {
+                                alert(error);
+//                                console.log('error[' + status + '] jsonp');
+                            }
+                        });
+//                        $.ajax({
+//                            url :   "http://angularjs.org/greet.php?callback=JSON_CALLBACK&name=Super%20Hero",
+//                            dataType : "jsonp",
+//                            jsonp : "callback",
+//                            success : function(data){
+//                                alert(data);
+//                            }
+//                        });
+//                        var responsePromise = $http.get("https://www.tistory.com/apis/blog/info?access_token=75d973cacecde72b51426de12c5ae253_bec7bdc0591cf42d9df68dba062d0388&output=json");
+//                        responsePromise.success(function (data, status, headers, config) {
+//                            alert(data);
+//                        });
+//                        responsePromise.error(function (data, status, headers, config) {
+//                            alert("AJAX failed!");
+//                        });
+                    }
+                });
+    </script>
+</head>
+<body ng-app="myapp">
+<div ng-controller="MyController">
+    <input type="button" value="블로그데이터" ng-click="blogJson()"/>
+    {{ data }}
+
+    <form action="https://www.tistory.com/apis/blog/info" method="get">
+        <input type="hidden" name="access_token" value="f76a2dc9597c1dda11ba62b329df8a88_17a5b584d48c8b86b0886ce16f0ff632" />
+        <input type="hidden" name="output" value="json" />
+        <input type="submit" value="확인" />
+    </form>
+    <input type="button" value="토큰생성" ng-click="getToken()"/>
+</div>
+</body>
+</html>

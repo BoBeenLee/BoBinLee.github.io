@@ -6,30 +6,41 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:support(.) styles/vendor.support -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/sausage.css">
-    <link rel="stylesheet" href="styles/flexslider.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
 
+    <!-- build:support(.tmp) styles/main.support -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main/sausage.css">
+    <link rel="stylesheet" href="styles/main/flexslider.css">
+
+    <!-- build:support(.tmp) styles/post.support -->
+    <link rel="stylesheet" href="styles/syntax/shCore.css">
+    <link rel="stylesheet" href="styles/syntax/shThemeDefault.css">
     <!-- content -->
     <link rel="stylesheet" href="styles/contents/competition.css">
     <link rel="stylesheet" href="styles/contents/softhome.css">
+    <link rel="stylesheet" href="styles/contents/house.css">
+    <link rel="stylesheet" href="styles/contents/skhualarm.css">
     <!-- endbuild -->
 </head>
 <body ng-app="meanstackApp" ng-controller="HomeCtrl" ng-init="init()">
 <!-- Add your site or application content here -->
 <div class="container">
     <div class="header">
-        <ul class="nav nav-pills pull-right">
-            <li class="active"><a ng-href="">Home</a></li>
-            <!--<li><a ng-href="#/about">About</a></li>-->
+        <ul class="nav nav-pills">
+            <li ng-repeat="item in menus"
+                ng-class="{ 'active': $index == selectedIndex }"
+                ng-click="menuClicked($index)"><a ng-href="{{ item.url }}">{{ item.name }}</a></li>
         </ul>
-        <h3 class="rumble text-muted">BoBinLee</h3>
+        <h2 class="rumble text-muted pull-right">BoBin Lee</h2>
     </div>
     <div ng-view class="view-animate">
     </div>
@@ -43,7 +54,7 @@
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
             (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
+    }, i[r].l = 1 * new Date();
         a = s.createElement(o),
                 m = s.getElementsByTagName(o)[0];
         a.async = 1;
@@ -75,23 +86,31 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <!-- endbower -->
+
+
+
 <!-- main -->
 <script src="scripts/js/jquery.ui.widget.js"></script>
-<script src="scripts/js/jquery.stellar.js"></script>
+<!--<script src="scripts/js/jquery.stellar.js"></script>-->
 <script src="scripts/js/jquery.jrumble.1.3.min.js"></script>
 <script src="scripts/js/jquery.flexslider-min.js"></script>
 <script src="scripts/js/jquery.zoom.min.js"></script>
 <script src="scripts/js/jquery.sausage.js"></script>
+
+<script src="scripts/syntax/shCore.js"></script>
+<script src="scripts/syntax/shBrushJava.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/about.js"></script>
+<script src="scripts/controllers/post.js"></script>
 
 <!-- contents -->
 <script src="scripts/controllers/contents/competition.js"></script>
 <script src="scripts/controllers/contents/softhome.js"></script>
+<script src="scripts/controllers/contents/house.js"></script>
+<script src="scripts/controllers/contents/skhualarm.js"></script>
 <!-- endbuild -->
 
 </body>

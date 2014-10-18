@@ -23,14 +23,23 @@ angular
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl'
             })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl'
+            .when('/post', {
+                templateUrl: '../views/post.html',
+                controller: 'PostCtrl'
             })
             .otherwise({
                 redirectTo: '/'
             });
     }).controller('HomeCtrl', function ($scope) {
+        $scope.menus = [{url : '/', name : 'Me'}, {url : '/#/post', name : 'Post'}];
+
+        $scope.selectedIndex = -1; // Whatever the default selected index is, use -1 for no selection
+        $scope.menuClicked = function ($index) {
+            $(window).sausage("destroy");
+
+            $scope.selectedIndex = $index;
+        };
+
         $scope.init = function () {
             // rumble
             $('.rumble').jrumble({
@@ -40,7 +49,6 @@ angular
                 speed: 120
             });
             $('.rumble').trigger('startRumble');
-            //  alert(jQuery(".category-content").html());
         }
     });
 

@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Tistory OAuth 2.0 Sample - Example Implicit Grant </TITLE>
+</head>
+
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+<script>
+    if (window.location.hash) {
+        alert(window.location.hash.substring(1));
+    }
+
+    angular.module("myapp", [])
+            .controller("MyController", function ($scope, $http) {
+//                $scope.data = "hello";
+
+                $scope.getToken = function () {
+                    var reqPo = {"client_id": "2e9ed0c88441f79c35f62149e70a990a",
+                        "redirect_uri": "http://localhost:9000/views/get_token.html",
+                        "response_type": "token"
+                    };
+//                    $scope.data = "https://www.tistory.com/oauth/authorize?" + JSON.stringify(reqPo);
+// ?client_id=2e9ed0c88441f79c35f62149e70a990a&redirect_uri=http://localhost:9000/views/get_token.html&response_type=token
+                    $scope.data = "https://www.tistory.com/oauth/authorize?" + $.param(reqPo);
+
+                    var responsePromise = $http.jsonp("https://www.tistory.com/oauth/authorize?" + $.param(reqPo));
+                    responsePromise.success(function (data, status, headers, config) {
+                        alert(data);
+                    });
+                    responsePromise.error(function (data, status, headers, config) {
+                        alert(status);
+                        alert("AJAX failed!");
+                    });
+
+
+//                    $http.jsonp("http://angularjs.org/greet.php?callback=JSON_CALLBACK&name=Super%20Hero").
+//                            success(function (data) {
+//                                alert(data);
+//                            }).
+//                            error(function (data) {
+//                                $scope.data = "Request failed";
+//                            });
+                }
+            });
+    // access_token=1aa559aa599a23356c0e3b050417c5e6_f5617d7d6ab2c0c4d31b2c205a3d14c1
+</script>
+
+<body ng-app="myapp">
+<div ng-controller="MyController">
+    <input type="button" value="토큰생성" ng-click="getToken()"/>
+    {{ data }}
+</div>
+<!--  https://www.tistory.com/oauth/authorize?client_id=2e9ed0c88441f79c35f62149e70a990a&redirect_uri=http://localhost:9000/views/get_token.html&response_type=token  -->
+<!--<form method="get" action="https://www.tistory.com/oauth/authorize/">-->
+<!--<input type="hidden" name="client_id" value="2e9ed0c88441f79c35f62149e70a990a"/>-->
+<!--<input type="hidden" name="redirect_uri" value="http://localhost:9000/views/get_token.html"/>-->
+<!--<input type="hidden" name="response_type" value="token"/>-->
+<!--<button type="submit">get access_token!</button>-->
+<!--</form>-->
+</body>
+</html>

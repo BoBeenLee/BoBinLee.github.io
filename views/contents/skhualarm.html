@@ -5,10 +5,10 @@
     <title></title>
 </head>
 <body>
-<div class="softhome" ng-controller="SoftHomeCtrl">
-    <div class="softhome-tag">학과 홈페이지</div>
+<div class="skhualarm" ng-controller="SkhuAlarmCtrl">
+    <div class="skhualarm-tag">학과 홈페이지</div>
     <hr>
-    <div class="softhome-slider">
+    <div class="skhualarm-slider">
         <div class="flexslider">
             <ul class="slides">
                 <!--<li>-->
@@ -23,10 +23,10 @@
                 <!--<li>-->
                 <!--<img class="img-rounded" src="/images/competition/1.png" alt="image" width="650"/>-->
                 <!--</li>-->
-                <li ng-repeat="img in images">
+                <li ng-repeat="image in images">
                     <div class="zoom">
                         {{ refresh($last) }}
-                        <img class="img-rounded zoom" src="/images/softhome/{{ img }}" alt="image"/>
+                        <img class="img-rounded zoom" src="/images/skhualarm/{{ image }}" alt="image"/>
                     </div>
                 </li>
             </ul>

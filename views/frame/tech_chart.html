@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>amCharts examples</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="/scripts/chart/amcharts.js"></script>
+    <script src="/scripts/chart/serial.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+        var chartData = [
+            {
+                "language": "Web",
+                "score": 800,
+                "color": "#FF0F00"
+            },
+            {
+                "language": "Android",
+                "score": 560,
+                "color": "#FF6600"
+            },
+            {
+                "language": "Spring Framework",
+                "score": 600,
+                "color": "#FF9E01"
+            },
+            {
+                "language": "Java",
+                "score": 650,
+                "color": "#FCD202"
+            },
+            {
+                "language": "Javascript",
+                "score": 450,
+                "color": "#B0DE09"
+            },
+            {
+                "language": "AngularJS",
+                "score": 120,
+                "color": "#04D215"
+            },
+            {
+                "language": "jQuery",
+                "score": 250,
+                "color": "#0D8ECF"
+            },
+            {
+                "language": "CSS",
+                "score": 400,
+                "color": "#0D52D1"
+            },
+            {
+                "language": "LessJS",
+                "score": 150,
+                "color": "#2A0CD0"
+            },
+            {
+                "language": "DB",
+                "score": 450,
+                "color": "#8A0CCF"
+            },
+            {
+                "language": "MariaDB, MySQL",
+                "score": 400,
+                "color": "#CD0D74"
+            },
+            {
+                "language": "Oracle",
+                "score": 250,
+                "color": "#FF0F00"
+            },
+            {
+                "language": "PostgreSQL",
+                "score": 250,
+                "color": "#FF6600"
+            },
+            {
+                "language": "PHP",
+                "score": 120,
+                "color": "#FF9E01"
+            },
+            {
+                "language": "Actionscript",
+                "score": 100,
+                "color": "#FCD202"
+            },
+            {
+                "language": "Flex",
+                "score": 80,
+                "color": "#F8FF01"
+            },
+            {
+                "language": "Visual Basic",
+                "score": 300,
+                "color": "#B0DE09"
+            },
+            {
+                "language": "Algorithm",
+                "score": 400,
+                "color": "#04D215"
+            },
+            {
+                "language": "Design Pattern",
+                "score": 330,
+                "color": "#0D8ECF"
+            },
+            {
+                "language": "Refactoring",
+                "score": 450,
+                "color": "#0D52D1"
+            },
+            {
+                "language": "Windows Server",
+                "score": 150,
+                "color": "#2A0CD0"
+            },
+            {
+                "language": "Ubuntu",
+                "score": 180,
+                "color": "#8A0CCF"
+            },
+            {
+                "language": "Github",
+                "score": 160,
+                "color": "#CD0D74"
+            },
+            {
+                "language": "PPT",
+                "score": 320,
+                "color": "#FF0F00"
+            },
+            {
+                "language": "PowerPoint",
+                "score": 300,
+                "color": "#FF6600"
+            },
+            {
+                "language": "Prezi",
+                "score": 270,
+                "color": "#FF9E01"
+            }
+        ];
+
+        AmCharts.ready(function () {
+            // SERIAL CHART
+            var chart = new AmCharts.AmSerialChart();
+            chart.dataProvider = chartData;
+            chart.categoryField = "language";
+            chart.startDuration = 1;
+            chart.color = "#FFF";
+            // AXES
+            // category
+            var categoryAxis = chart.categoryAxis;
+            categoryAxis.labelRotation = 90; // this line makes category values to be rotated
+            categoryAxis.fillColor = "#FFFFFF";
+            categoryAxis.gridPosition = "start";
+
+            // value
+            // in case you don't want to change default settings of value axis,
+            // you don't need to create it, as one value axis is created automatically.
+            // GRAPH
+            var graph = new AmCharts.AmGraph();
+            graph.valueField = "score";
+            graph.colorField = "color";
+            graph.balloonText = "[[category]]: <b>[[value]]</b>";
+            graph.type = "column";
+            graph.lineAlpha = 0;
+            graph.fillAlphas = 0.8;
+            chart.addGraph(graph);
+            // CURSOR
+            var chartCursor = new AmCharts.ChartCursor();
+            chartCursor.cursorAlpha = 0;
+            chartCursor.zoomable = false;
+            chartCursor.categoryBalloonEnabled = false;
+            chart.addChartCursor(chartCursor);
+
+            chart.creditsPosition = "top-right";
+            chart.write("chartdiv");
+        });
+    </script>
+</head>
+<style type="text/css">
+    #chartdiv {
+        height: 500px;
+    }
+</style>
+<body style="background-color: transparent;">
+<div id="chartdiv" class="container"></div>
+</body>
+
+</html>

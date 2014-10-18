@@ -102,20 +102,22 @@ body {
     font-size: 1.1em;
 }
 
-/* */
+/************** PROFILE ***************/
 .intro {
+    height: auto;
     background-color: #193441;
     color: #FCFFF5;
     padding-bottom: 50px !important;
 }
 
-.intro ul {
+.intro .intro-content {
+    height: 400px;
     padding: 15px;
     padding-left: 30px;
 }
 
-.intro ul li {
-    padding-bottom: 10px;
+.hobby-tag div {
+   margin-top: 15px;
 }
 
 .my-github {
@@ -123,54 +125,66 @@ body {
     float: right;
 }
 
-.category {
+.contact {
+    padding-top: 10px;
+}
+
+/************** RESSUME ***************/
+
+.resume {
     background-color: #3E606F;
     color: #D1DBBD;
-}
-
-.category ul {
-    padding: 15px;
-    padding-left: 50px;
-    list-style: circle;
-}
-
-.category ul li {
-    color: #FCFFF5;
-    padding-bottom: 10px;
-
-}
-
-.category ul li span {
-    cursor: pointer;
-}
-
-.category-content {
-    background-color: #91AA9D;
-    color: #3E606F;
-    min-height: 600px;
-}
-
-.zoom {
-    display:inline-block;
-    position: relative;
-}
-
-.facebook-content {
-    background-color: #D1DBBD;
-    color: #193441;
     padding-bottom: 40px;
 }
 
-.category-content .side-tag {
-    display: none;
+.resume-content {
+    color: #fff;
 }
 
-.facebook-content .side-tag {
-    display: none;
+.tech-chart {
+    padding-left: 30px;
 }
 
-.fb-comments, .fb-comments span, .fb-comments iframe {
-    width: 100% !important;
+#tech-chart {
+    width: 100%;
+    height: 500px;
+    background-color: transparent;
+}
+
+/************** portfolio ***************/
+
+.portfolio {
+    background-color: #91AA9D;
+    color: #3E606F;
+    min-height: 600px;
+    padding-bottom: 30px;
+}
+
+.portfolio .portfolio-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.portfolio .portfolio-header ul {
+    display: table;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.portfolio .portfolio-header ul li {
+    display: inline-block;
+    color: #FCFFF5;
+    margin-right: 15px;
+}
+
+.portfolio .portfolio-header ul li a {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.portfolio .zoom {
+    display:inline-block;
+    position: relative;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -186,6 +200,14 @@ body {
     /* Space out the masthead */
     .header {
         margin-bottom: 30px;
+    }
+
+    .header ul.nav {
+        display: inline-block;
+    }
+
+    .header h2 {
+        padding-bottom: 10px;
     }
 
     /* Remove the bottom border on the jumbotron for visual effect */

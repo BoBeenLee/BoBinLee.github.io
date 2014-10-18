@@ -1,4 +1,4 @@
-<div class="row main default-size page-set" ng-init="init()">
+<div class="main default-size page-set" ng-init="init()">
     <!--<div class="rainy-weather">-->
     <!--<div class="cloud-main"></div>-->
     <!--<div class="cloud-center"></div>-->
@@ -7,43 +7,78 @@
     <!--</div>-->
     <!--<div class="planet" style="left: -650px; top: 559.5px;" data-stellar-ratio="0.57" data-stellar-horizontal-offset="0"></div>-->
     <div class="intro page">
-        <span class="side-tag">About Me</span>
+        <span class="side-tag">PROFILE</span>
         <div class="my-github">
-            <iframe src="http://lab.lepture.com/github-cards/card.html?user=BoBinLee" frameborder="0" scrolling="0" width="400" height="120" allowtransparency></iframe>
+            <iframe src="http://lab.lepture.com/github-cards/card.html?user=BoBinLee" frameborder="0" scrolling="0"
+                    width="400" height="120" allowtransparency></iframe>
             <div>
-                <h3>Contact at</h3>
+                <h3>CONTACTS</h3>
                 <a href="mailto:cultist_tp@naver.com">cultist_tp@naver.com</a>
+                <br>
+
+                <div class="contact">
+                    <a class="btn btn-primary" href="https://www.facebook.com/bobin.lee.9">Facebook</a>
+                    <a class="btn btn-primary" href="">LinkedIn</a>
+                    <a class="btn btn-primary" href="">Tistory</a>
+                </div>
             </div>
         </div>
-        <ul>
-            <li><span>숭문고등학교 졸업</span></li>
-            <li><span>소프트웨어관리병 전역</span></li>
-            <li><span>성공회대학교 재학중</span></li>
-        </ul>
-    </div>
-    <div class="category page">
-        <span class="side-tag">Category</span>
-        <ul>
-            <li ng-repeat="content in contents"><span ng-click="setContent($index)">{{ content.name }}</span></li>
-        </ul>
-    </div>
-    <div class="category-content page">
-        <span class="side-tag">Content</span>
-        <div ng-include src="content.url">
+        <div class="intro-content">
+
+        </div>
+        <div class="hobby-tag">
+            <h2>취미</h2>
+            <div>
+                <a href="#" class="btn btn-warning">기타 - 통기타</a>
+                <a href="#" class="btn btn-warning">노래 - 락, 기타, 재즈</a>
+                <a href="#" class="btn btn-warning">운동 - 복근, 등, 아령</a>
+                <a href="#" class="btn btn-warning">프로그래밍 - 웹 (AngularJS, Spring Framework)</a>
+                <a href="#" class="btn btn-warning">유용한 팁 수집</a>
+            </div>
         </div>
     </div>
-    <div class="facebook-content page">
-        <span class="side-tag">SNS</span>
-        <div id="fb-root"></div>
-        <script>(function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=154374664667119&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-        <div class="fb-comments" data-href="https://github.com/BoBinLee" data-width="100%" data-numposts="5"
-             data-colorscheme="light"></div>
+    <div class="resume page">
+        <span class="side-tag">RESUME</span>
+
+        <div class="resume-content">
+            <ul>
+                <li><h3>학력</h3></li>
+                <li><span class="profile-year">2006 - 2010</span> 숭문고등학교 졸업</li>
+                <li><span class="profile-year">2010 -</span> 성공회대학교 입학</li>
+                <li><h3>경력</h3></li>
+                <li><span class="profile-year">2012.06 - 2014.03 </span> 국군지휘통신사령부 소프트웨어관리병</li>
+                <li><h3>활동</h3></li>
+                <li><span class="profile-year">2014.03 - 2014.08</span> <a href="http://www.sopt.org/">대학생 연합 IT
+                    벤처 창업 동아리 - SOPT</a></li>
+                <li><span class="profile-year">2014.07 -</span> <a href="http://teamnexters.com/">연합 IT 개발/디자인
+                    동아리 - Nexters</a></li>
+                <li><h3>자격증</h3></li>
+                <li><span class="profile-year"></span>정보처리산업기사</li>
+                <li><span class="profile-year"></span>컴퓨터활용 2급</li>
+                <li><span class="profile-year"></span>워드프로세서 1급</li>
+                <li><span class="profile-year"></span>ITQ엑셀 파워포인트</li>
+                <li><h3>수상</h3></li>
+                <li><span class="profile-year">2011.06</span> <a href="http://183.106.113.109/">더블릿</a> 알고리즘 사이트 2위</li>
+                <li><span class="profile-year">2012.06</span> 제 4회 소프트웨어공학과 교내 소프트웨어경진대회 2등</li>
+                <li><span class="profile-year">2014.06</span> 제 6회 성공회대학교 경진대회관리시스템 2등</li>
+                <li><span class="profile-year">2014.07</span> 대학생 연합 IT 벤처 창업 동아리 - <a href="http://sopt.org/wp/?p=5007">Let's Go</a> 앱잼 ( 최우수상 )</li>
+                <li><span class="profile-year">2014.10</span> 제5회 IT경진대회 금상</li>
+            </ul>
+        </div>
+        <div class="tech-chart">
+            <h2>보유  기술</h2>
+        </div>
+        <iframe id="tech-chart" src="/views/frame/tech_chart.html" frameborder="0" scrolling="0"
+                allowtransparency></iframe>
     </div>
+    <div class="portfolio page">
+        <span class="side-tag">PORTFOLIO</span>
+        <div class="portfolio-header">
+            <ul>
+                <li ng-repeat="content in contents"><a class="btn btn-primary" ng-click="setContent($index)">{{ content.name }}</a></li>
+            </ul>
+        </div>
+        <div ng-include src="content.url">
+    </div>
+</div>
 </div>
