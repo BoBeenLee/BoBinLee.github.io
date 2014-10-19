@@ -1,10 +1,11 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,700);
 
 /* Space out content a bit */
 body {
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #FCFFF5;
+    background-image: url('images/bg.png');
     /*overflow:hidden;*/
 }
 
@@ -14,28 +15,7 @@ body {
 
 /* Custom page header */
 .header {
-    border-bottom: 1px solid #e5e5e5;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-}
-
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
-
-.footer-font {
-
+    height: 76px;
 }
 
 /* Customize container */
@@ -45,11 +25,8 @@ body {
     }
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
-}
-
 /* main */
+/* common */
 .main {
     margin: 10px 0;
 }
@@ -59,8 +36,8 @@ body {
 }
 
 .main > div {
-    margin-bottom: 20px;
-    padding: 20px;
+    padding: 48px;
+    margin-bottom: 12px;
     border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-bottom-left-radius: 8px;
@@ -75,9 +52,18 @@ body {
     list-style: none;
 }
 
-/* common */
 .side-tag {
-    font-size: 3em;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.side-tag span {
+    height: 36px;
+    padding: 5px 10px;
+    color: #fff223;
+    font-size: 24px;
+    font-weight: lighter;
+    border: 2px solid #fff223;
 }
 
 .default-size {
@@ -87,27 +73,33 @@ body {
 /************** PROFILE ***************/
 .intro {
     height: auto;
-    background-color: #193441;
-    color: #FCFFF5;
-    padding-bottom: 50px !important;
+    background-color: #122434;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.intro .side-tag {
+    margin-bottom: 24px;
+}
+
+.intro .side-tag span {
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Ubuntu', 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    border: 0px solid transparent;
 }
 
 .intro .intro-content {
-    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
 }
 
 .intro .intro-content p {
-    padding: 15px;
-    font-size: 17px;
-}
-
-.my-github {
-    padding-top: 40px;
-    padding-left: 15px;
-}
-
-.contact {
-    padding-top: 10px;
+    padding: 10px;
 }
 
 .hobby-tag > div {
@@ -128,13 +120,21 @@ body {
 /************** RESSUME ***************/
 
 .resume {
-    background-color: #3E606F;
+    background-color: #233749;
     color: #D1DBBD;
-    padding-bottom: 40px;
+}
+
+.resume h3 {
+    color: #69f2ff;
+    font-size: 16px;
 }
 
 .resume-content {
     color: #fff;
+}
+
+.resume-content ul li h3 {
+    line-height: 30px;
 }
 
 .tech-chart {
@@ -150,15 +150,12 @@ body {
 /************** portfolio ***************/
 
 .portfolio {
-    background-color: #91AA9D;
-    color: #3E606F;
+    background-color: #394d5f;
     min-height: 600px;
-    padding-bottom: 30px;
 }
 
 .portfolio .portfolio-header {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 48px;
 }
 
 .portfolio .portfolio-header ul {
@@ -169,13 +166,21 @@ body {
 
 .portfolio .portfolio-header ul li {
     display: inline-block;
-    color: #FCFFF5;
-    margin-right: 15px;
+    margin-right: 30px;
 }
 
 .portfolio .portfolio-header ul li a {
-    font-size: 20px;
+    padding-bottom: 5px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    font-size: 16px;
+    text-decoration: none;
     cursor: pointer;
+}
+
+.portfolio .portfolio-header ul li a.selected {
+    color: #69f2ff;
+    border-bottom: 2px solid #69f2ff;
 }
 
 .portfolio .zoom {
@@ -183,36 +188,23 @@ body {
     position: relative;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
 
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
+/** ********* */
 
-    .header ul.nav {
-        display: inline-block;
-    }
-
-    .header h2 {
-        padding-bottom: 10px;
-    }
-
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
+.contact {
+    background-color: #526678;
+    padding-bottom: 80px;
 }
 
-/* Test */
+.contact > div {
+    padding-top: 10px;
+}
+
+.contact-content {
+    padding-top: 40px;
+}
+
+/* Test
 .planet {
     background-color: #000;
     border-radius: 1000px;
@@ -278,4 +270,4 @@ body {
 .zoom img {
     display: block;
     background-color: #00b3ee;
-}
+} */

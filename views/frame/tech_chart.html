@@ -14,11 +14,6 @@
     <script type="text/javascript">
         var chartData = [
             {
-                "language": "Web",
-                "score": 800,
-                "color": "#FF0F00"
-            },
-            {
                 "language": "Android",
                 "score": 560,
                 "color": "#FF6600"
@@ -54,17 +49,7 @@
                 "color": "#0D52D1"
             },
             {
-                "language": "LessJS",
-                "score": 150,
-                "color": "#2A0CD0"
-            },
-            {
-                "language": "DB",
-                "score": 450,
-                "color": "#8A0CCF"
-            },
-            {
-                "language": "MariaDB, MySQL",
+                "language": "MariaDB, PostgreSQL",
                 "score": 400,
                 "color": "#CD0D74"
             },
@@ -72,26 +57,6 @@
                 "language": "Oracle",
                 "score": 250,
                 "color": "#FF0F00"
-            },
-            {
-                "language": "PostgreSQL",
-                "score": 250,
-                "color": "#FF6600"
-            },
-            {
-                "language": "PHP",
-                "score": 120,
-                "color": "#FF9E01"
-            },
-            {
-                "language": "Actionscript",
-                "score": 100,
-                "color": "#FCD202"
-            },
-            {
-                "language": "Flex",
-                "score": 80,
-                "color": "#F8FF01"
             },
             {
                 "language": "Visual Basic",
@@ -114,34 +79,14 @@
                 "color": "#0D52D1"
             },
             {
-                "language": "Windows Server",
-                "score": 150,
-                "color": "#2A0CD0"
-            },
-            {
-                "language": "Ubuntu",
-                "score": 180,
+                "language": "Window",
+                "score": 600,
                 "color": "#8A0CCF"
             },
             {
-                "language": "Github",
-                "score": 160,
-                "color": "#CD0D74"
-            },
-            {
-                "language": "PPT",
-                "score": 320,
-                "color": "#FF0F00"
-            },
-            {
-                "language": "PowerPoint",
-                "score": 300,
+                "language": "Linux",
+                "score": 500,
                 "color": "#FF6600"
-            },
-            {
-                "language": "Prezi",
-                "score": 270,
-                "color": "#FF9E01"
             }
         ];
 
@@ -150,35 +95,38 @@
             var chart = new AmCharts.AmSerialChart();
             chart.dataProvider = chartData;
             chart.categoryField = "language";
-            chart.startDuration = 1;
-            chart.color = "#FFF";
+            chart.rotate = true;
+            chart.color = "#FFFFFF";
+            chart.handDrawn = true;
+            chart.handDrawScatter = 4;
+
             // AXES
             // category
             var categoryAxis = chart.categoryAxis;
-            categoryAxis.labelRotation = 90; // this line makes category values to be rotated
-            categoryAxis.fillColor = "#FFFFFF";
-            categoryAxis.gridPosition = "start";
+            categoryAxis.gridAlpha = 0;
+            categoryAxis.axisAlpha = 0;
+            categoryAxis.labelsEnabled = false;
 
             // value
             // in case you don't want to change default settings of value axis,
             // you don't need to create it, as one value axis is created automatically.
             // GRAPH
             var graph = new AmCharts.AmGraph();
-            graph.valueField = "score";
-            graph.colorField = "color";
             graph.balloonText = "[[category]]: <b>[[value]]</b>";
+            graph.valueField = "score";
             graph.type = "column";
+            graph.colorField = "color";
             graph.lineAlpha = 0;
-            graph.fillAlphas = 0.8;
+            graph.fillAlphas = 0.5;
+            // you can pass any number of colors in array to create more fancy gradients
+            graph.fillColors = ["#000000", "#FF6600"];
+            graph.gradientOrientation = "horizontal";
+            graph.labelPosition = "inside";
+            graph.labelText = "[[category]]: [[value]] Litres";
+            graph.balloonText = "[[category]]: [[value]] Litres";
             chart.addGraph(graph);
-            // CURSOR
-            var chartCursor = new AmCharts.ChartCursor();
-            chartCursor.cursorAlpha = 0;
-            chartCursor.zoomable = false;
-            chartCursor.categoryBalloonEnabled = false;
-            chart.addChartCursor(chartCursor);
 
-            chart.creditsPosition = "top-right";
+            chart.creditsPosition = "bottom-right";
             chart.write("chartdiv");
         });
     </script>

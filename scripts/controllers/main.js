@@ -28,6 +28,7 @@ angular.module('meanstackApp')
             }
         ];
         $scope.content = null;
+        $scope.selectedIndex = 0;
 
         $scope.init = function init() {
             // $(window).stellar();
@@ -37,11 +38,21 @@ angular.module('meanstackApp')
                     return '<span class="sausage-span">' + $page.find('.side-tag').first().text() + '</span>';
                 }
             });
+
+            // rumble
+            $('.rumble').jrumble({
+                x: 15,
+                y: 5,
+                rotation: 4,
+                speed: 120
+            });
+            $('.rumble').trigger('startRumble');
             // settings
             $scope.setContent(0);
         };
 
         $scope.setContent = function (index) {
+            $scope.selectedIndex = index;
             $scope.content = $scope.contents[index];
         };
     });

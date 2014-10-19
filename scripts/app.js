@@ -41,14 +41,7 @@ angular
         };
 
         $scope.init = function () {
-            // rumble
-            $('.rumble').jrumble({
-                x: 15,
-                y: 5,
-                rotation: 4,
-                speed: 120
-            });
-            $('.rumble').trigger('startRumble');
+
         }
     });
 
