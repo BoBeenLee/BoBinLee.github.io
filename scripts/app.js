@@ -32,17 +32,14 @@ angular
             });
     }).controller('HomeCtrl', function ($scope) {
         $scope.menus = [{url : '/', name : 'Me'}, {url : '/#/post', name : 'Post'}];
-
         $scope.selectedIndex = -1; // Whatever the default selected index is, use -1 for no selection
+
         $scope.menuClicked = function ($index) {
             $(window).sausage("destroy");
-
             $scope.selectedIndex = $index;
         };
 
-        $scope.init = function () {
-
-        }
+        $scope.init = function () { }
     });
 
 

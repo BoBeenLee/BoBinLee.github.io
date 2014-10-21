@@ -84,7 +84,8 @@
 
         <div class="portfolio-header">
             <ul>
-                <li ng-repeat="content in contents"><a ng-class="{'selected': $index==selectedIndex}" ng-click="setContent($index)">{{
+                <li ng-repeat="content in contents"><a ng-class="{'selected': $index==selectedIndex}"
+                                                       ng-click="setContent($index)">{{
                     content.name }}</a></li>
             </ul>
         </div>
@@ -93,14 +94,28 @@
     </div>
     <div class="row contact page">
         <div class="side-tag"><span>Contacts</span></div>
-        <iframe src="http://lab.lepture.com/github-cards/card.html?user=BoBinLee" frameborder="0" scrolling="0"
-                class="col-md-5" height="120" allowtransparency></iframe>
+
         <div class="contact-content col-md-7">
-            <a class="btn btn-success" href="mailto:cultist_tp@naver.com">Naver</a>
-            <a class="btn btn-primary" href="https://www.facebook.com/bobin.lee.9">Facebook</a>
-            <a class="btn btn-primary" href="">LinkedIn</a>
-            <a class="btn btn-warning" href="">Tistory</a>
+            <a href="mailto:cultist_tp@naver.com">
+                <img src="images/main/mail_img.svg" height="60px"/>
+            </a>
+            <a href="https://www.facebook.com/bobin.lee.9"><img src="images/main/facebook.png"/></a>
+            <a href=""><img src="images/main/linkin.png"/></a>
+            <a href=""><img src="images/main/tistory.png"/></a>
         </div>
+
+        <!-- github-card -->
+        <div class="github-card col-md-5">
+            <iframe src="http://lab.lepture.com/github-cards/card.html?user=BoBinLee" frameborder="0" scrolling="0"
+                    allowtransparency></iframe>
+        </div>
+    </div>
+</div>
+<div class="bottom-menu">
+    <div ng-repeat="menu in bottomMenus">
+        <a href="#" ng-click="onBottomMenuClick($index + 1)">
+            <img src="{{ menu.img }}"/>
+        </a>
     </div>
 </div>
 </body>

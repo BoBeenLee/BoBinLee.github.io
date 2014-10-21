@@ -12,23 +12,20 @@ body {
 * {
     font-family: 'Nanum Gothic', sans-serif;
 }
-
+/* mobile first */
 /* Custom page header */
 .header {
-    height: 76px;
+    height: 48px;
 }
 
-/* Customize container */
-@media (min-width: 768px) {
-    .container {
-        max-width: 1024px;
-    }
+.container {
+    max-width: 1024px;
 }
 
 /* main */
 /* common */
 .main {
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 .main p + h4 {
@@ -36,7 +33,7 @@ body {
 }
 
 .main > div {
-    padding: 48px;
+    padding: 30px 5px;
     margin-bottom: 12px;
     border-radius: 8px;
     -moz-border-radius: 8px;
@@ -83,7 +80,7 @@ body {
 }
 
 .intro .side-tag span {
-    font-size: 72px;
+    font-size: 80px;
     color: #fff;
     font-family: 'Ubuntu', 'Nanum Gothic', sans-serif;
     font-weight: bold;
@@ -133,12 +130,17 @@ body {
     color: #fff;
 }
 
+.resume-content ul {
+    padding: 0;
+    margin: 0px 5px;
+}
+
 .resume-content ul li h3 {
     line-height: 30px;
 }
 
 .tech-chart {
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 #tech-chart {
@@ -156,17 +158,16 @@ body {
 
 .portfolio .portfolio-header {
     margin-bottom: 48px;
+    text-align: center;
 }
 
 .portfolio .portfolio-header ul {
-    display: table;
-    margin: 0 auto;
     list-style: none;
 }
 
 .portfolio .portfolio-header ul li {
     display: inline-block;
-    margin-right: 30px;
+    margin: 10px 15px;
 }
 
 .portfolio .portfolio-header ul li a {
@@ -188,8 +189,7 @@ body {
     position: relative;
 }
 
-
-/** ********* */
+/************** contact ***************/
 
 .contact {
     background-color: #526678;
@@ -198,10 +198,98 @@ body {
 
 .contact > div {
     padding-top: 10px;
+    text-align: center;
 }
 
-.contact-content {
-    padding-top: 40px;
+.contact-email {
+    text-align: center;
+}
+/*.contact-email a {*/
+    /*display: block;*/
+    /*color: #69f2ff;*/
+    /*text-align: center;*/
+    /*margin: 10px 0;*/
+/*}*/
+.github-card iframe {
+    width: 100%;
+    height: 120px;
+}
+.contact-content a {
+    margin: 5px 10px;
+}
+
+.bottom-menu {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    opacity: 0.5;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.bottom-menu div {
+    display: inline-block;
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bottom-menu a img {
+    width: 54px;
+    height: 54px;
+}
+
+.sausage-set {
+    display: none;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+    .main > div {
+        padding: 48px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -webkit-border-bottom-right-radius: 8px;
+        -webkit-border-top-right-radius: 8px;
+        -moz-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
+        -webkit-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
+    }
+    /************** PROFILE ***************/
+
+    .intro .side-tag span {
+        font-size: 72px;
+        color: #fff;
+        font-family: 'Ubuntu', 'Nanum Gothic', sans-serif;
+        font-weight: bold;
+        border: 0px solid transparent;
+    }
+
+    /************** RESSUME ***************/
+
+    .resume-content ul {
+        margin: 0px 5px;
+    }
+
+    .tech-chart {
+        padding-left: 30px;
+    }
+
+    /************** PORTFOLIO ***************/
+
+    .bottom-menu {
+        display: none;
+    }
+
+    .sausage-set {
+        display: block;
+    }
 }
 
 /* Test

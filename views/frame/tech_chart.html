@@ -112,7 +112,6 @@
             // you don't need to create it, as one value axis is created automatically.
             // GRAPH
             var graph = new AmCharts.AmGraph();
-            graph.balloonText = "[[category]]: <b>[[value]]</b>";
             graph.valueField = "score";
             graph.type = "column";
             graph.colorField = "color";
@@ -122,8 +121,8 @@
             graph.fillColors = ["#000000", "#FF6600"];
             graph.gradientOrientation = "horizontal";
             graph.labelPosition = "inside";
-            graph.labelText = "[[category]]: [[value]] Litres";
-            graph.balloonText = "[[category]]: [[value]] Litres";
+            graph.labelText = "[[category]]";
+            graph.balloonText = "[[category]]";
             chart.addGraph(graph);
 
             chart.creditsPosition = "bottom-right";

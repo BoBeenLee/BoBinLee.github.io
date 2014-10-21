@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:support(.) styles/vendor.support -->
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -37,11 +37,12 @@
 <!-- Add your site or application content here -->
 <div class="container">
     <div class="header">
-        <ul class="nav nav-pills">
-            <li ng-repeat="item in menus"
-                ng-class="{ 'active': $index == selectedIndex }"
-                ng-click="menuClicked($index)"><a ng-href="{{ item.url }}">{{ item.name }}</a></li>
-        </ul>
+        <img width="92" height="46" src="images/logo.svg">
+        <!--<ul class="nav nav-pills">-->
+            <!--<li ng-repeat="item in menus"-->
+                <!--ng-class="{ 'active': $index == selectedIndex }"-->
+                <!--ng-click="menuClicked($index)"><a ng-href="{{ item.url }}">{{ item.name }}</a></li>-->
+        <!--</ul>-->
     </div>
     <div ng-view class="view-animate">
     </div>
@@ -85,8 +86,6 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <!-- endbower -->
-
-
 
 <!-- main -->
 <script src="scripts/js/jquery.ui.widget.js"></script>
