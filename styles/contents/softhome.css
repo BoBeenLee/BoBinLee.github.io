@@ -10,3 +10,14 @@
 .softhome-slider img {
     height: auto;
 }
+
+.content {
+    font-size: 16px;
+    color: #fff;
+}
+
+.title, .preview, .dev, .reference {
+    font-size: 16px;
+    color: #69f2ff;
+    margin: 10px 0;
+}

@@ -37,11 +37,15 @@ angular.module('meanstackApp')
                     current: "",
                     next: "",
                     previous: "",
-                    close: "",
                     onLoad:function(){
                         var idx = $(this).attr("content").trim();
 //                        alert(val("12"));
                         $('.flexslider').flexslider(Number(idx));
+                    },
+                    onComplete:function(){
+                        $('#cboxLoadedContent img').on("click", function(){
+                            $.colorbox.close();
+                        });
                     }
                 });
             }

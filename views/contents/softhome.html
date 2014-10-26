@@ -20,6 +20,33 @@
             </ul>
         </div>
     </div>
+    <div class="content">
+        <div class="title">교내 학과 홈페이지</div>
+        <div>팀원 : 최정원, 유정훈, 이보빈</div>
+        <hr>
+        <div>사용자 : 성공회대 대학생, 교수</div>
+        <div class="preview">개요</div>
+        <p>
+            <a href="http://sw.skhu.ac.kr">학과 홈페이지</a>를 가보면 알 수 있듯이 구글, 파이어폭스에 홈페이지가 원활히 보여주진 않는다.<br/>
+            여러 버그들이 존재하는 학과 홈페이지라 개선이 필요하게 되었다.<br/>
+            그래서 학과 홈페이지를 만들게 되었고, 디자인과 내부적인 속도 향상, 다양한 브라우저 환경을 보여주도록 하였다.
+        </p>
+        <div class="dev">개발</div>
+        <p>
+            jsp, servlet으로 서버단 개발을 주로 담당하였고, 프론트 단은 보조로 담당하였다.<br/>
+            웹 화면은 Prototype.js와 jquery ajax를 써서 웹 화면 전환 없이 컨텐츠 부분만 전환하게 구현을 하였다.<br/>
+            url 부분은 #를 이용하여 예를 들면,<br/>
+            index.jsp#board?key=value<br/>
+            index.jsp#article?key=value 형식으로 각각의 url의 형태에 따라 웹 컨텐츠 화면 부분이 달라지게 구성하였다.<br/>
+            Ajax를 사용하면 특정 컨텐츠 페이지 접근이 힘들다는 점을 보완하기 위해서 #(hash)로 구분을 하여 ajax 요청을 각기 다르게 설정을 하였다.<br/>
+            서버는 서브 메뉴별 servlet을 두어 MVC 모델로 요청에 따라 각기 다른 전송을 하도록 하였다.
+        </p>
+        <div class="reference">Reference</div>
+        <p>
+            Client - JQuery, Prototype.js, JPage.js<br/>
+            Server - JSP, Servlet, Mybatis
+        </p>
+    </div>
 </div>
 </body>
 </html>
