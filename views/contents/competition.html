@@ -10,12 +10,19 @@
         <div class="flexslider">
             <ul class="slides">
                 <li ng-repeat="image in images">
-                    <div class="zoom">
+                    <div>
                         {{ refresh($last) }}
-                        <img class="img-rounded" src="/images/competition/{{ image }}" alt="image"/>
+                        <a class="box-img" href="/images/competition/{{ image }}" content="{{ $index }}">
+                            <img class="img-rounded" src="/images/competition/{{ image }}" alt="image"/>
+                        </a>
                     </div>
                 </li>
             </ul>
+        </div>
+
+        <div class="competition-content">
+
+
         </div>
     </div>
 </div>

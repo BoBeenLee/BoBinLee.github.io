@@ -11,7 +11,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
-    <!-- bower:css --> 
+    <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
@@ -22,6 +22,7 @@
     <!-- build:support(.tmp) styles/main.support -->
     <link rel="stylesheet" href="styles/main/sausage.css">
     <link rel="stylesheet" href="styles/main/flexslider.css">
+    <link rel="stylesheet" href="styles/main/colorbox.css">
 
     <!-- build:support(.tmp) styles/post.support -->
     <link rel="stylesheet" href="styles/syntax/shCore.css">
@@ -37,7 +38,7 @@
 <!-- Add your site or application content here -->
 <div class="container">
     <div class="header">
-        <img width="92" height="46" src="images/logo.svg">
+        <img width="46" height="46" src="images/logo.svg">
         <!--<ul class="nav nav-pills">-->
             <!--<li ng-repeat="item in menus"-->
                 <!--ng-class="{ 'active': $index == selectedIndex }"-->
@@ -90,10 +91,11 @@
 <!-- main -->
 <script src="scripts/js/jquery.ui.widget.js"></script>
 <!--<script src="scripts/js/jquery.stellar.js"></script>-->
-<script src="scripts/js/jquery.jrumble.1.3.min.js"></script>
-<script src="scripts/js/jquery.flexslider-min.js"></script>
-<script src="scripts/js/jquery.zoom.min.js"></script>
-<script src="scripts/js/jquery.sausage.js"></script>
+<!--<script src="scripts/main/jquery.zoom.min.js"></script>-->
+<script src="scripts/main/jquery.jrumble.1.3.min.js"></script>
+<script src="scripts/main/jquery.flexslider-min.js"></script>
+<script src="scripts/main/jquery.colorbox-min.js"></script>
+<script src="scripts/main/jquery.sausage.js"></script>
 
 <script src="scripts/syntax/shCore.js"></script>
 <script src="scripts/syntax/shBrushJava.js"></script>
@@ -101,15 +103,14 @@
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/post.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/post.js"></script>
 
 <!-- contents -->
-<script src="scripts/controllers/contents/competition.js"></script>
-<script src="scripts/controllers/contents/softhome.js"></script>
-<script src="scripts/controllers/contents/house.js"></script>
-<script src="scripts/controllers/contents/skhualarm.js"></script>
+<script src="scripts/contents/competition.js"></script>
+<script src="scripts/contents/softhome.js"></script>
+<script src="scripts/contents/house.js"></script>
+<script src="scripts/contents/skhualarm.js"></script>
 <!-- endbuild -->
 
 </body>
-</html>

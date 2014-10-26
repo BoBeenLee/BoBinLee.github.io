@@ -12,7 +12,9 @@
                 <li ng-repeat="image in images">
                     <div class="zoom">
                         {{ refresh($last) }}
-                        <img class="img-rounded zoom" src="/images/skhualarm/{{ image }}" alt="image"/>
+                        <a class="box-img" href="/images/skhualarm/{{ image }}" content="{{ $index }}">
+                            <img class="img-rounded" src="/images/skhualarm/{{ image }}" alt="image"/>
+                        </a>
                     </div>
                 </li>
             </ul>
