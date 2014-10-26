@@ -32,7 +32,7 @@ angular.module('meanstackApp')
             if (last) {
                 $('.flexslider').flexslider({
                     animation: "slide",
-                    animationLoop: false,
+                    animationLoop: true,
                     smoothHeight: true
                 });
                 $('.box-img').colorbox({
@@ -44,9 +44,9 @@ angular.module('meanstackApp')
                     next: "",
                     previous: "",
                     onLoad:function(){
-                        var idx = $(this).attr("content").trim();
-//                        alert(val("12"));
-                        $('.flexslider').flexslider(Number(idx));
+//                        var idx = $(this).attr("content").trim();
+////                        alert(val("12"));
+//                        $('.flexslider').flexslider(Number(idx));
                     },
                     onComplete:function(){
                         $('#cboxLoadedContent img').on("click", function(){
