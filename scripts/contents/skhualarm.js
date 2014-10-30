@@ -20,14 +20,17 @@ angular.module('meanstackApp')
         ];
 
         $scope.init = function () {
-        }
+            $scope.isOne = false;
+        };
 
-        $scope.refresh = function (last) {
-            if (last) {
-                $('.flexslider').flexslider({
-                    animation: "slide",
-                    animationLoop: false,
-                    smoothHeight: true
+        $scope.refresh = function () {
+            if (!$scope.isOne) {
+                $scope.isOne = true;
+
+                $('.slides').bxSlider({
+                    auto: true,
+                    adaptiveHeight: true,
+                    mode: 'fade'
                 });
                 $('.box-img').colorbox({
                     rel:'box-img',

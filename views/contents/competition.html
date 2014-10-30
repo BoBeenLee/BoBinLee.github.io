@@ -7,43 +7,42 @@
 <body>
 <div class="competition" ng-controller="CompetitionCtrl" ng-init="init()">
     <div class="competition-slider">
-        <div class="flexslider">
-            <ul class="slides">
-                <li ng-repeat="image in images">
-                    <div>
-                        {{ refresh($last) }}
-                        <a class="box-img" href="/images/competition/{{ image }}" content="{{ $index }}">
-                            <img class="img-rounded" src="/images/competition/{{ image }}" alt="image"/>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="title">경진대회관리시스템</div>
-            <div>팀원 : 이보빈</div>
-            <hr>
-            <div>사용자 : 성공회대 대학생, 교수, TA</div>
-            <div class="preview">개요</div>
-            <p>
-                성공회대학교에 매년 교내 경진대회가 열렸다.<br/>
-                대회가 개최되고 종료가 되면, 참가했던 팀들의 자료와 소스들을 저장할 곳이 필요하고, 공유 할 곳도 필요했었다.<br/>
-                그런데 그에 맞는 대회 관리 시스템이 갖추어져 있지가 않아 경진대회관리시스템을 만들게 되었다.<br/>
-            </p>
-            <div class="dev">개발</div>
-            <p>
-                웹 화면 부분은 AngularJS를 써서 JS 컨트롤러로 웹 화면을 다루기 쉽게 구성하고 부트스크랩을 이용해 반응형 웹 형태를 잡았다.<br/>
-                서버는 스프링 프레임워크를 이용해 컨트롤, 서비스, DAO 단이 원활하게 이루어지게끔 구성하였다.<br/>
-                DB는 처음엔 기본적인 사용자, 게시판 설계부터 시작하여 팀, 태그, 첨부자료, 평가자까지 논리, 물리적 설계를 하였다.<br/>
-                ER-Win으로 설계 후, MariaDB SQL문을 작성 후, MyBatis로 연결 부분까지 전과정을 구현하였다.
-            </p>
-            <div class="reference">Reference</div>
-            <p>
-                Client - Bootstrap, AngularJS, LessJS, JQuery<br/>
-                Server - Spring Framework, Spring Security, Tiles, MyBatis, MariaDB, JUnit
-            </p>
-        </div>
+        <ul class="slides">
+            <li ng-repeat="image in images">
+                <a class="box-img" href="/images/competition/{{ image }}" content="{{ $index }}">
+                    <img class="img-rounded" src="/images/competition/{{ image }}" alt="image"/>
+                </a>
+                {{ refresh() }}
+            </li>
+        </ul>
     </div>
+    <div class="content">
+        <div class="title">경진대회관리시스템</div>
+        <div>팀원 : 이보빈</div>
+        <hr>
+        <div>사용자 : 성공회대 대학생, 교수, TA</div>
+        <div class="preview">개요</div>
+        <p>
+            성공회대학교에 매년 교내 경진대회가 열렸다.<br/>
+            대회가 개최되고 종료가 되면, 참가했던 팀들의 자료와 소스들을 저장할 곳이 필요하고, 공유 할 곳도 필요했었다.<br/>
+            그런데 그에 맞는 대회 관리 시스템이 갖추어져 있지가 않아 경진대회관리시스템을 만들게 되었다.<br/>
+        </p>
+
+        <div class="dev">개발</div>
+        <p>
+            웹 화면 부분은 AngularJS를 써서 JS 컨트롤러로 웹 화면을 다루기 쉽게 구성하고 부트스크랩을 이용해 반응형 웹 형태를 잡았다.<br/>
+            서버는 스프링 프레임워크를 이용해 컨트롤, 서비스, DAO 단이 원활하게 이루어지게끔 구성하였다.<br/>
+            DB는 처음엔 기본적인 사용자, 게시판 설계부터 시작하여 팀, 태그, 첨부자료, 평가자까지 논리, 물리적 설계를 하였다.<br/>
+            ER-Win으로 설계 후, MariaDB SQL문을 작성 후, MyBatis로 연결 부분까지 전과정을 구현하였다.
+        </p>
+
+        <div class="reference">Reference</div>
+        <p>
+            Client - Bootstrap, AngularJS, LessJS, JQuery<br/>
+            Server - Spring Framework, Spring Security, Tiles, MyBatis, MariaDB, JUnit
+        </p>
+    </div>
+</div>
 </div>
 </body>
 </html>

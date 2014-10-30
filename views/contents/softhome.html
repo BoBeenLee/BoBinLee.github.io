@@ -7,18 +7,14 @@
 <body>
 <div class="softhome" ng-controller="SoftHomeCtrl">
     <div class="softhome-slider">
-        <div class="flexslider">
-            <ul class="slides">
-                <li ng-repeat="image in images">
-                    <div class="zoom">
-                        {{ refresh($last) }}
-                        <a class="box-img" href="/images/softhome/{{ image }}" content="{{ $index }}">
-                            <img class="img-rounded" src="/images/softhome/{{ image }}" alt="image"/>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <ul class="slides">
+            <li ng-repeat="image in images">
+                <a class="box-img" href="/images/softhome/{{ image }}" content="{{ $index }}">
+                    <img class="img-rounded" src="/images/softhome/{{ image }}" alt="image"/>
+                </a>
+                {{ refresh() }}
+            </li>
+        </ul>
     </div>
     <div class="content">
         <div class="title">교내 학과 홈페이지</div>
@@ -31,6 +27,7 @@
             여러 버그들이 존재하는 학과 홈페이지라 개선이 필요하게 되었다.<br/>
             그래서 학과 홈페이지를 만들게 되었고, 디자인과 내부적인 속도 향상, 다양한 브라우저 환경을 보여주도록 하였다.
         </p>
+
         <div class="dev">개발</div>
         <p>
             jsp, servlet으로 서버단 개발을 주로 담당하였고, 프론트 단은 보조로 담당하였다.<br/>
@@ -41,6 +38,7 @@
             Ajax를 사용하면 특정 컨텐츠 페이지 접근이 힘들다는 점을 보완하기 위해서 #(hash)로 구분을 하여 ajax 요청을 각기 다르게 설정을 하였다.<br/>
             서버는 서브 메뉴별 servlet을 두어 MVC 모델로 요청에 따라 각기 다른 전송을 하도록 하였다.
         </p>
+
         <div class="reference">Reference</div>
         <p>
             Client - JQuery, Prototype.js, JPage.js<br/>
