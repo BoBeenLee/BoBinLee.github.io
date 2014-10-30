@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head lang="en">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title></title>-->
+<!--</head>-->
+<!--<body>-->
 <div class="main default-size page-set" ng-init="init()">
     <!--<div class="rainy-weather">-->
     <!--<div class="cloud-main"></div>-->
@@ -35,7 +35,6 @@
         <!--<div><a href="#" class="btn btn-danger">유용한 팁</a><a href="#" class="btn btn-primary">컴퓨터</a><a href="#"-->
         <!--class="btn btn-primary">소프트웨어</a>-->
         <!--</div>-->
-
         <!--<div><a href="#" class="btn btn-danger">기타</a><a href="#" class="btn btn-primary">통기타</a></div>-->
         <!--<div><a href="#" class="btn btn-danger">노래</a><a href="#" class="btn btn-primary">락, 기타, 재즈</a></div>-->
         <!--<div><a href="#" class="btn btn-danger">운동</a><a href="#" class="btn btn-primary">복근, 등, 아령</a></div>-->
@@ -99,7 +98,7 @@
                 <img src="images/main/mail_img.svg" height="60px"/>
             </a>
             <a href="https://www.facebook.com/bobin.lee.9"><img src="images/main/facebook.png"/></a>
-            <a href=""><img src="images/main/linkin.png"/></a>
+            <a href="https://kr.linkedin.com/pub/보빈-이/a5/613/35/"><img src="images/main/linkin.png"/></a>
             <a href="http://cultist-tp.tistory.com"><img src="images/main/tistory.png"/></a>
         </div>
 
@@ -113,9 +112,9 @@
 <div class="bottom-menu">
     <div ng-repeat="menu in bottomMenus">
         <a href="#" ng-click="onBottomMenuClick($index + 1)">
-            <img src="{{ menu.img }}" />
+            <img ng-src="{{ menu.img }}"/>
         </a>
     </div>
 </div>
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->

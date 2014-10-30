@@ -5,12 +5,12 @@
     <title></title>
 </head>
 <body>
-<div class="skhualarm" ng-controller="SkhuAlarmCtrl">
+<div class="skhualarm" ng-controller="SkhuAlarmCtrl" ng-init="init()">
     <div class="skhualarm-slider">
         <ul class="slides">
             <li ng-repeat="image in images">
                 <a class="box-img" href="/images/skhualarm/{{ image }}" content="{{ $index }}">
-                    <img class="img-rounded" src="/images/skhualarm/{{ image }}" alt="image"/>
+                    <img class="img-rounded" ng-src="/images/skhualarm/{{ image }}" alt="image"/>
                 </a>
                 {{ refresh() }}
             </li>

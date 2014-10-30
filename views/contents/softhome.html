@@ -5,12 +5,12 @@
     <title></title>
 </head>
 <body>
-<div class="softhome" ng-controller="SoftHomeCtrl">
+<div class="softhome" ng-controller="SoftHomeCtrl" ng-init="init()">
     <div class="softhome-slider">
         <ul class="slides">
             <li ng-repeat="image in images">
                 <a class="box-img" href="/images/softhome/{{ image }}" content="{{ $index }}">
-                    <img class="img-rounded" src="/images/softhome/{{ image }}" alt="image"/>
+                    <img class="img-rounded" ng-src="/images/softhome/{{ image }}" alt="image"/>
                 </a>
                 {{ refresh() }}
             </li>

@@ -31,27 +31,26 @@ angular.module('meanstackApp')
         $scope.bottomMenus = [
             {
                 name : "home",
-                img : "images/main/home_icon.svg"
+                img : "/images/main/home_icon.svg"
             } ,
             {
                 name : "about me",
-                img : "images/main/me_icon.svg"
+                img : "/images/main/me_icon.svg"
             } ,
             {
                 name : "portfolio",
-                img : "images/main/port_icon.svg"
+                img : "/images/main/port_icon.svg"
             } ,
             {
                 name : "contact",
-                img : "images/main/contact_icon.svg"
+                img : "/images/main/contact_icon.svg"
             }
         ];
 
         $scope.content = null;
         $scope.selectedIndex = 0;
 
-        $scope.init = function init() {
-            // $(window).stellar();
+        $scope.init = function() {
             // sausage
             $(window).sausage({
                 content: function (i, $page) {
@@ -69,6 +68,7 @@ angular.module('meanstackApp')
                 speed: 120
             });
             $('.rumble').trigger('startRumble');
+
             // settings
             $scope.setContent(0);
         };
@@ -81,11 +81,9 @@ angular.module('meanstackApp')
 //                $scope.isMobile = false;
 //            }
 //        }
-//
 //        $window.onresize = function () {
 //            $scope.resizeAdjustments();
 //        }
-
         $scope.onBottomMenuClick = function(index){
             angular.element(".sausage-set .sausage:nth-of-type(" + index + ")").trigger("click");
         }

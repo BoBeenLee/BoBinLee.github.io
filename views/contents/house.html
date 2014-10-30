@@ -5,12 +5,12 @@
     <title></title>
 </head>
 <body>
-<div class="house" ng-controller="HouseCtrl">
+<div class="house" ng-controller="HouseCtrl" ng-init="init()">
     <div class="house-slider">
         <ul class="slides">
             <li ng-repeat="image in images">
                 <a class="box-img" href="/images/house/{{ image }}" content="{{ $index }}">
-                    <img class="img-rounded" src="/images/house/{{ image }}" alt="image"/>
+                    <img class="img-rounded" ng-src="/images/house/{{ image }}" alt="image"/>
                 </a>
                 {{ refresh() }}
             </li>
