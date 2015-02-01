@@ -25,11 +25,7 @@ angular
             .when('/post', {
                 templateUrl: '../views/post.html',
                 controller: 'PostCtrl'
-            })
-            .when('/dailyhotel', {
-              templateUrl: '../views/dailyhotel.html'
-            })
-            .otherwise({
+            }).otherwise({
                 redirectTo: '/'
             });
     }).controller('HomeCtrl', function ($scope) {
