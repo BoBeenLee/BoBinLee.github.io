@@ -26,6 +26,9 @@ angular
                 templateUrl: '../views/post.html',
                 controller: 'PostCtrl'
             })
+            .when('/dailyhotel', {
+              templateUrl: '../views/dailyhotel.html'
+            })
             .otherwise({
                 redirectTo: '/'
             });
