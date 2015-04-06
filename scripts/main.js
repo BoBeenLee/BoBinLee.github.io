@@ -29,6 +29,10 @@ angular.module('meanstackApp')
       {
         name: '입학상담앱',
         url: '/views/contents/skhucalc.html'
+      },
+      {
+        name: '중간지점앱',
+        url: '/views/contents/intersection.html'
       }
     ];
 
