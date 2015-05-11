@@ -97,7 +97,12 @@
             graph.gradientOrientation = "horizontal";
             graph.labelPosition = "inside";
             graph.labelText = "[[category]]";
-            graph.balloonText = "[[category]]";
+            graph.balloonText = "[[category]]"
+
+            var valueAxis = new AmCharts.ValueAxis();
+            valueAxis.maximum = 100;
+
+            chart.addValueAxis(valueAxis);
             chart.addGraph(graph);
 
             chart.creditsPosition = "bottom-right";
