@@ -3,86 +3,96 @@
 
 /* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-image: url('/images/bg.png');
-    /*overflow:hidden;*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url('/images/bg.png');
+  /*overflow:hidden;*/
 }
 
 * {
-    font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
+
 /* mobile first */
 /* Custom page header */
 .header {
-    height: 48px;
+  height: 48px;
 }
 
 .container {
-    max-width: 1024px;
+  max-width: 1024px;
 }
 
 /* main */
 /* common */
 .main {
-    margin: 10px 10px;
+  margin: 10px 10px;
 }
 
 .main p + h4 {
-    margin-top: 28px;
+  margin-top: 28px;
 }
 
 .main > div {
-    padding: 30px 5px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    -moz-border-radius: 8px;
-    -webkit-border-bottom-left-radius: 8px;
-    -webkit-border-top-left-radius: 8px;
-    -webkit-border-bottom-right-radius: 8px;
-    -webkit-border-top-right-radius: 8px;
-    -moz-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
-    -webkit-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
+  padding: 30px 5px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
+  -webkit-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
+}
+
+.main .portfolio-content .content li:before {
+  content: "• ";
+  color: #4283AB; /* or whatever color you prefer */
+}
+
+.main .portfolio-content .content ul {
+  padding: 0px 8px;
 }
 
 .main ul {
-    list-style: none;
+  list-style: none;
 }
 
 .side-tag {
-    text-align: center;
-    margin-bottom: 48px;
+  text-align: center;
+  margin-bottom: 48px;
 }
 
 .side-tag span {
-    height: 36px;
-    padding: 5px 10px;
-    color: #fff223;
-    font-size: 24px;
-    font-weight: lighter;
-    border: 2px solid #fff223;
+  height: 36px;
+  padding: 5px 10px;
+  color: #fff223;
+  font-size: 24px;
+  font-weight: lighter;
+  border: 2px solid #fff223;
 }
 
 .default-size {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 /************** PROFILE ***************/
 .intro {
-    height: auto;
-    background-color: #122434;
-    padding-top: 80px !important;
-    padding-bottom: 80px !important;
+  height: auto;
+  background-color: #122434;
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
 }
 
 .intro .side-tag {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 
-    font-size: 80px;
-    color: #fff;
-    font-family: 'Ubuntu', 'Nanum Gothic', sans-serif;
-    font-weight: bold;
-    border: 0px solid transparent;
+  font-size: 80px;
+  color: #fff;
+  font-family: 'Ubuntu', 'Nanum Gothic', sans-serif;
+  font-weight: bold;
+  border: 0px solid transparent;
 }
 
 .intro .side-tag span {
@@ -90,117 +100,116 @@ body {
 }
 
 .intro .intro-content {
-    width: 100%;
-    font-size: 14px;
-    color: #fff;
-    line-height: 24px;
-    text-align: center;
+  width: 100%;
+  font-size: 14px;
+  color: #fff;
+  line-height: 24px;
+  text-align: center;
 }
 
 .intro .intro-content p {
-    padding: 10px;
+  padding: 10px;
 }
 
 .hobby-tag > div {
-    padding: 15px;
+  padding: 15px;
 }
 
 .hobby-tag div > div {
-    display: inline-block;
-    margin-top: 15px;
-    margin-right: 5px;
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 5px;
 }
 
 .hobby-tag div > div a {
-    margin-right: 5px;
+  margin-right: 5px;
 }
-
 
 /************** RESSUME ***************/
 
 .resume {
-    background-color: #233749;
-    color: #D1DBBD;
+  background-color: #233749;
+  color: #D1DBBD;
 }
 
 .resume h3 {
-    color: #69f2ff;
-    font-size: 16px;
+  color: #69f2ff;
+  font-size: 16px;
 }
 
 .resume-content {
-    color: #fff;
+  color: #fff;
 }
 
 .resume-content ul {
-    padding: 0;
-    margin: 0px 5px;
+  padding: 0;
+  margin: 0px 5px;
 }
 
 .resume-content ul li h3 {
-    line-height: 30px;
+  line-height: 30px;
 }
 
 .tech-chart {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 #tech-chart {
-    width: 100%;
-    height: 500px;
-    background-color: transparent;
+  width: 100%;
+  height: 500px;
+  background-color: transparent;
 }
 
 /************** portfolio ***************/
 
 .portfolio {
-    background-color: #394d5f;
-    min-height: 600px;
+  background-color: #394d5f;
+  min-height: 600px;
 }
 
 .portfolio .portfolio-header {
-    margin-bottom: 48px;
-    text-align: center;
+  margin-bottom: 48px;
+  text-align: center;
 }
 
 .portfolio .portfolio-header ul {
-    list-style: none;
+  list-style: none;
 }
 
 .portfolio .portfolio-header ul li {
-    display: inline-block;
-    margin: 10px 15px;
+  display: inline-block;
+  margin: 10px 15px;
 }
 
 .portfolio .portfolio-header ul li a {
-    padding-bottom: 5px;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
+  padding-bottom: 5px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .portfolio .portfolio-header ul li a.selected {
-    color: #69f2ff;
-    border-bottom: 2px solid #69f2ff;
+  color: #69f2ff;
+  border-bottom: 2px solid #69f2ff;
 }
 
 .portfolio .portfolio-content .content {
-    margin-top: 30px;
-    font-size: 16px;
-    color: #fff;
-    line-height: 25px;
+  margin-top: 30px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 25px;
 }
 
 .portfolio .portfolio-content .content p {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
-.portfolio .portfolio-content .title, .preview, .dev, .reference {
-    font-size: 16px;
-    color: #69f2ff;
-    margin: 10px 0;
+.portfolio .portfolio-content .title, .preview, .dev, .user, .documentation, .reference {
+  font-size: 16px;
+  color: #69f2ff;
+  margin: 10px 0;
 }
 
 #cboxClose {
@@ -210,102 +219,102 @@ body {
 /************** contact ***************/
 
 .contact {
-    background-color: #526678;
-    padding-bottom: 80px;
+  background-color: #526678;
+  padding-bottom: 80px;
 }
 
 .contact > div {
-    padding-top: 10px;
-    text-align: center;
+  padding-top: 10px;
+  text-align: center;
 }
 
 .contact-email {
-    text-align: center;
+  text-align: center;
 }
+
 /*.contact-email a {*/
-    /*display: block;*/
-    /*color: #69f2ff;*/
-    /*text-align: center;*/
-    /*margin: 10px 0;*/
+/*display: block;*/
+/*color: #69f2ff;*/
+/*text-align: center;*/
+/*margin: 10px 0;*/
 /*}*/
 .github-card iframe {
-    width: 100%;
-    height: 120px;
+  width: 100%;
+  height: 120px;
 }
+
 .contact-content a img {
-    margin: 5px 10px;
+  margin: 5px 10px;
 }
 
 .bottom-menu {
-    display: block;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 999;
-    opacity: 0.5;
-    width: 100%;
-    height: 42px;
-    text-align: center;
-    background-color: #eee;
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  opacity: 0.5;
+  width: 100%;
+  height: 42px;
+  text-align: center;
+  background-color: #eee;
 }
 
 .bottom-menu div {
-    display: inline-block;
-    padding: 6px 15px;
+  display: inline-block;
+  padding: 6px 15px;
 }
 
 .bottom-menu a img {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .sausage-set {
-    display: none;
+  display: none;
 }
 
 /* Customize container */
 @media (min-width: 768px) {
-    .main > div {
-        padding: 48px;
-        margin-bottom: 12px;
-        border-radius: 8px;
-        -moz-border-radius: 8px;
-        -webkit-border-bottom-left-radius: 8px;
-        -webkit-border-top-left-radius: 8px;
-        -webkit-border-bottom-right-radius: 8px;
-        -webkit-border-top-right-radius: 8px;
-        -moz-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
-        -webkit-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
-    }
-    /************** PROFILE ***************/
+  .main > div {
+    padding: 48px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
+    -webkit-box-shadow: inset 0px 1px 2px 4px rgba(0, 0, 0, 0.025);
+  }
 
-    .intro .side-tag span {
-        font-size: 72px;
-        color: #fff;
-        font-family: 'Ubuntu', 'Nanum Gothic', sans-serif;
-        font-weight: bold;
-        border: 0px solid transparent;
-    }
+  /************** PROFILE ***************/
+  .intro .side-tag span {
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Ubuntu', 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    border: 0px solid transparent;
+  }
 
-    /************** RESSUME ***************/
+  /************** RESSUME ***************/
+  .resume-content ul {
+    margin: 0px 5px;
+  }
 
-    .resume-content ul {
-        margin: 0px 5px;
-    }
+  .tech-chart {
+    padding-left: 30px;
+  }
 
-    .tech-chart {
-        padding-left: 30px;
-    }
+  /************** PORTFOLIO ***************/
+  .bottom-menu {
+    display: none;
+  }
 
-    /************** PORTFOLIO ***************/
-
-    .bottom-menu {
-        display: none;
-    }
-
-    .sausage-set {
-        display: block;
-    }
+  .sausage-set {
+    display: block;
+  }
 }
 
 /* Test

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/../../meanstack/app/scripts/contents/competition.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../meanstack/app/scripts/contents/house.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../meanstack/app/scripts/contents/intersection.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../meanstack/app/scripts/contents/skhualarm.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../meanstack/app/scripts/contents/skhucalc.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../meanstack/app/scripts/contents/softhome.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../meanstack/app/styles/main.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../meanstack/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bower.json" charset="UTF-8" />
+  </component>
 </project>
-

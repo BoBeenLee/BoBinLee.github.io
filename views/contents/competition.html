@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
 </head>
 <body>
 <div class="competition" ng-controller="CompetitionCtrl" ng-init="init()">
-    <div class="competition-slider">
-        <ul class="slides">
-            <li ng-repeat="image in images">
-                <a class="box-img" href="/images/competition/{{ image }}" content="{{ $index }}">
-                    <img class="img-rounded" ng-src="/images/competition/{{ image }}" alt="image"/>
-                </a>
-                {{ refresh() }}
-            </li>
-        </ul>
-    </div>
-    <div class="content">
-        <div class="title">경진대회관리시스템</div>
-        <div>팀원 : 이보빈</div>
-        <hr>
-        <div>사용자 : 성공회대 대학생, 교수, TA</div>
-        <div class="preview">개요</div>
-        <p>
-            우리 학교에선 매년 교내 IT 경진대회가 열렸다.<br/>
-            대회가 열리고 끝나면 다음에 참가할 사람들을 위해서 참여했던 팀들의 자료를 공유할 공간이 필요하였다.<br/>
-            2010년부터 시작한 경진대회에 참가한 팀들의 자료를 학생들에게 공유하여 더 나은 IT 경진대회가 되었으면 하는 바람에<br/>
-            경진대회관리시스템을 만들게 되었다.<br/>
-        </p>
+  <div class="competition-slider">
+    <ul class="slides">
+      <li ng-repeat="image in images">
+        <a class="box-img" href="/images/competition/{{ image }}" content="{{ $index }}">
+          <img class="img-rounded" ng-src="/images/competition/{{ image }}" alt="image"/>
+        </a>
+        {{ refresh() }}
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="title">경진대회관리시스템</div>
+    <p class="team">이보빈</p>
+    <hr>
+    <div class="user">User</div>
+    <p>성공회대 대학생, 교수, TA</p>
 
-        <div class="dev">개발</div>
-        <p>
-            웹 화면 구현은 AngularJS의 컨트롤러로 웹 화면을 다루기 쉽게 구성하고 부트스크랩을 이용해 반응형 웹으로 만들었다.<br/>
-            서버는 스프링 프레임워크를 이용해 컨트롤, 서비스, DAO 단이 원활히 통신이 이루어지게 구성하였다.<br/>
-            DB는 처음엔 ER-Win으로 기본적인 사용자, 게시판 설계부터 시작하여 팀, 태그, 첨부자료, 평가자까지 논리, 물리적 설계(MariaDB SQL문 작성)을 하였다.<br/>
-        </p>
+    <div class="preview">Preview</div>
+    <p>
+      우리 학교에선 매년 교내 IT 경진대회가 열렸다.<br/>
+      대회가 열리고 끝나면 다음에 참가할 사람들을 위해서 참여했던 팀들의 자료를 공유할 공간이 필요하였다.<br/>
+      2010년부터 시작한 경진대회에 참가한 팀들의 자료를 학생들에게 공유하여 더 나은 IT 경진대회가 되었으면 하는 바람에<br/>
+      경진대회관리시스템을 만들게 되었다.<br/>
+    </p>
 
-        <div class="reference">Reference</div>
-        <p>
-            Client - Bootstrap, AngularJS, LessJS, JQuery <br/>
-            Server - Spring Framework, Spring Security, Tiles, MyBatis, JUnit <br/>
-            DB - MariaDB
-        </p>
-    </div>
+    <div class="dev">Development</div>
+    <p>
+      웹 화면 구현은 AngularJS의 컨트롤러로 웹 화면을 다루기 쉽게 구성하고 부트스크랩을 이용해 반응형 웹으로 만들었다.<br/>
+      서버는 스프링 프레임워크를 이용해 컨트롤, 서비스, DAO 단이 원활히 통신이 이루어지게 구성하였다.<br/>
+      DB는 처음엔 ER-Win으로 기본적인 사용자, 게시판 설계부터 시작하여 팀, 태그, 첨부자료, 평가자까지 논리, 물리적 설계(MariaDB SQL문 작성)을 하였다.<br/>
+    </p>
+
+    <div class="documentation">Documentation</div>
+    <ul>
+      <li>
+        <a target="_blank" href="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fdoc%2D0o%2D1c%2Ddocs%2Egoogleusercontent%2Ecom%3A443%2Fdocs%2Fsecuresc%2Fotfgnpcc7gm3hn20ncstqreoeji1ubda%2F7smaft1usn8hp5iarqe6ut2355iv1qio%2F1432526400000%2F18300866968699729648%2F18300866968699729648%2F0B8XAh1SciE%2D9Sy1hRFZDcUdMUDQ%3Fe%3Ddownload%26gd%3Dtrue%26access%5Ftoken%3Dya29%2EfgEhXaONmYVQMJo33CVpmyc%5Fdw2QpAQr5pulYqSKWKCSbzmA5ai5JsiGzrVEOpKFbF1PbpOO0UpCZg&wdAr=1.3333333333333333">Presentation</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/BoBinLee/SkhuCompetition.Server">Source</a>
+      </li>
+      <li>
+        <a
+          target="_blank" href="https://drive.google.com/folderview?id=0B8XAh1SciE-9fm5HcFo2VTF1SDh2OUpsMlJtUjl5cnpLUDM5RkNXbVo3YVEwaWU2ek9tNWM&usp=sharing">Archive</a>
+      </li>
+    </ul>
+
+    <div class="reference">Reference</div>
+    <p>
+      Client - Bootstrap, AngularJS, LessJS, JQuery <br/>
+      Server - Spring Framework, Spring Security, Tiles, MyBatis, JUnit <br/>
+      DB - MariaDB
+    </p>
+  </div>
 </div>
 </div>
 </body>

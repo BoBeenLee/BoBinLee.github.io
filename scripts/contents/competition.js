@@ -33,7 +33,7 @@ angular.module('meanstackApp')
                 $scope.isOne = true;
 
                 $('.slides').bxSlider({
-                    auto: true,
+                    auto: false,
                     adaptiveHeight: true,
                     mode: 'fade'
                 });

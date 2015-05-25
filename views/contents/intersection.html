@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
 </head>
 <body>
 <div class="intersection" ng-controller="IntersectionCtrl" ng-init="init()">
-    <div class="intersection-slider">
-        <ul class="slides">
-            <li ng-repeat="image in images">
-                <a class="box-img" href="/images/intersection/{{ image }}" content="{{ $index }}">
-                    <img class="img-rounded" ng-src="/images/intersection/{{ image }}" alt="image"/>
-                </a>
-                {{ refresh() }}
-            </li>
-        </ul>
-    </div>
-    <div class="content">
-        <div class="title">인터섹션 - 중간지점앱</div>
-        <div>팀원 : 기획 ( 정다혜 ), 디자인 ( 정승관, 강성구 ), 개발 ( 박준섭, 이보빈, 박지연, 박대현 )</div>
-        <hr>
-        <div>사용자 : 서울 거주자</div>
-        <div class="preview">개요</div>
-        <p>
-            친구들이나 사람들과 모임을 가지려하면 각기 다른 위치에 살기 때문에<br/>
-            만날 위치를 지정하는 것이 어려운 일이었다.<br/>
-            이런 문제를 해결하기 위해서 우리가 만나기 쉬운 전철을 기준으로</br>
-            중간지점을 찾아 보여주는 앱니다.
-        </p>
+  <div class="intersection-slider">
+    <ul class="slides">
+      <li ng-repeat="image in images">
+        <a class="box-img" href="/images/intersection/{{ image }}" content="{{ $index }}">
+          <img class="img-rounded" ng-src="/images/intersection/{{ image }}" alt="image"/>
+        </a>
+        {{ refresh() }}
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="title">인터섹션 - 중간지점앱</div>
+    <p class="team">기획 ( 정다혜 ), 디자인 ( 정승관, 강성구 ), 개발 ( 박준섭, 이보빈, 박지연, 박대현 )</p>
+    <hr>
+    <div class="user">사용자</div>
+    <p>ALL</p>
+    <div class="preview">Preview</div>
+    <p>
+      친구들이나 사람들과 모임을 가지려 하면 각기 다른 위치에 살기 때문에<br/>
+      만날 위치를 정하는 것은 어려운 일이다.<br/>
+      이런 문제를 해결하기 위해서 우리가 만나기 쉬운 전철을 기준으로</br>
+      중간지점을 찾아 보여주는 앱이다.
+    </p>
 
-        <div class="dev">개발 - 서버, 안드로이드 웹뷰 개발</div>
-        <p>
-          안드로이드 : 다음 맵 API를 이용하여 맵을 컨트롤하였다.</br>
-          전철에 대한 정보나 좋아요 수를 얻어오기 위해서 서버와 통신하는 부분도 개발을 하였다.</br>
-          서버 : 스프링 프레임워크를 이용하여 톰캣 서버를 세팅하고 하이버네이트 적용하여 디비 객체와 매핑을 하였다.</br>
-        </p>
+    <div class="dev">Development - 서버, 안드로이드 웹뷰 개발</div>
+    <p>
+      안드로이드 : 다음 맵 API를 이용하여 맵을 컨트롤하였다.</br>
+      전철에 대한 정보나 좋아요 수를 얻어오기 위해서 서버와 통신하는 부분도 개발을 하였다.</br>
+      서버 : 스프링 프레임워크를 이용하여 톰캣 서버를 세팅하고 하이버네이트 적용하여 디비 객체와 매핑을 하였다.</br>
+    </p>
 
-        <div class="reference">Reference</div>
-        <p>
-            Android - MaterialDesign, Gson, Android-Async-Http<br/>
-            Server - Spring Framework, Hibernate, JUnit, Jackson JSON<br/>
-            DB - PostgreSQL
-        </p>
-    </div>
+    <div class="documentation">Documentation</div>
+    <ul>
+      <li>
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nexters.intersection.intersectionapp&hl=ko">App Store</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://drive.google.com/uc?export=download&confirm=wtY8&id=0B8XAh1SciE-9eHlmQm9zVThsc28">Presentation</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/Nexters/Intersection.Android">Android - Source</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/BoBinLee/map">Server - Source</a>
+      </li>
+      <li>
+        <a
+          target="_blank" href="https://drive.google.com/folderview?id=0B8XAh1SciE-9fk5QRVROWTdYem9HNDdobF9BWlNnX0pVei1rOWVlYXR1b3BrWlE5WGV5YUE&usp=sharing">Archive</a>
+      </li>
+    </ul>
+
+    <div class="reference">Reference</div>
+    <p>
+      Android - MaterialDesign, Gson, Android-Async-Http<br/>
+      Server - Spring Framework, Hibernate, JUnit, Jackson JSON<br/>
+      DB - PostgreSQL
+    </p>
+  </div>
 </div>
 </body>
 </html>

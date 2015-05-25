@@ -1,50 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
 </head>
 <body>
 <div class="skhualarm" ng-controller="SkhuAlarmCtrl" ng-init="init()">
-    <div class="skhualarm-slider">
-        <ul class="slides">
-            <li ng-repeat="image in images">
-                <a class="box-img" href="/images/skhualarm/{{ image }}" content="{{ $index }}">
-                    <img class="img-rounded" ng-src="/images/skhualarm/{{ image }}" alt="image"/>
-                </a>
-                {{ refresh() }}
-            </li>
-        </ul>
-    </div>
-    <div class="content">
-        <div class="title">성공회 알리미</div>
-        <div>팀원 : 이보빈</div>
-        <hr>
-        <div>사용자 : 성공회대 사람들</div>
-        <div class="preview">개요</div>
-        <p>
-            14년 여름방학 때이다. 수강 신정 기간이 다가오는 날이 되자, 학교 홈페이지를 방문 하게 되었다. 하지만 공고가 아직 안 올라왔었다.<br/>
-            그 다음 날에도 들어갔는 데 올라와있지 않은 것이다.<br/>
-            매번 공지사항이 올라올 때까지 학교 홈페이지를 방문하게 되었는 데, 그때 불필요한 행동을 게시물이 올라올때까지 하고 있었음을 알게 되었다.<br/>
-            생각을 바꿔 내가 학교 홈페이지에 들어가서 보는 것 보단 게시물이 왔다는 것을 알리는 형식이 낫지 않을까라는 생각에 성공회대학교 알리미를 만들게 되었다.
-        </p>
+  <div class="skhualarm-slider">
+    <ul class="slides">
+      <li ng-repeat="image in images">
+        <a class="box-img" href="/images/skhualarm/{{ image }}" content="{{ $index }}">
+          <img class="img-rounded" ng-src="/images/skhualarm/{{ image }}" alt="image"/>
+        </a>
+        {{ refresh() }}
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="title">성공회 알리미</div>
+    <p class="team">이보빈</p>
+    <hr>
+    <div class="user">User</div>
+    <p>성공회대 학생, 교수</p>
 
-        <div class="dev">개발</div>
-        <p>
-            안드로이드 : 화면 설계, GCM 설정, 데이터 송수신 규격을 만든 후, 안드로이드 구현하였다.<br/>
-            서버 : 스레드를 통한 주기적인 업데이트 설정, 안드로이드와 통신하기 위한 전문 명세서 작성과 통신 단을 구현하였다.<br/>
-            JSOUP API를 이용해 성공회대학교 페이지의 중요한 부분만 추출하여 MariaDB에다 저장하고 GCM 기능을 추가하였다.
-        </p>
+    <div class="preview">Preview</div>
+    <p>
+      14년 여름방학 때, 수강 신청 기간이 다가오자 학교 홈페이지를 들어갔었고 공고가 아직 안 올라왔었다.<br/>
+      그다음 날에도 들어갔는데 올라와 있지 않았다.<br/>
+      공고가 올라올 때까지 학교 홈페이지를 매일 방문하게 되었는 데, 내가 했던 행동이 너무 낭비되고 있다는 것을 느꼈다.<br/>
+      이런 행동 패턴을 바꾸고자 성공회대 알리미 앱을 만들게 되었다.
+    </p>
 
-        <div class="reference">Reference</div>
-        <p>
-            Android - Android Pull To Refresh, Android ViewPagerIndicator, HTTP ( Android-Async-Http ), Image Processor
-            ( Picasso ), Facebook Graph API, Json ( Gson ), Time ( Joda Time ), GCM <br/>
-            Server - Spring Framework, MyBatis, HTML Parser ( Jsoup ), Json ( Jackson JSON Processor ), Multi Thread (
-            Quartz Framework ), Time ( Joda Time ), Test ( JUnit ), GCM Server <br/>
-            DB - MariaDB
-        </p>
-    </div>
+    <div class="dev">Development</div>
+    <p>
+      안드로이드 : 화면 설계, GCM 설정, 데이터 송수신 규격을 만든 후, 안드로이드 구현하였다.<br/>
+      서버 : 스레드를 통한 주기적인 업데이트 설정, 안드로이드와 통신하기 위한 전문 명세서 작성과 통신 단을 구현하였다.<br/>
+      JSOUP API를 이용해 성공회대학교 페이지의 중요한 부분만 추출하여 MariaDB에다 저장하고 GCM 기능을 추가하였다.
+    </p>
+
+    <div class="documentation">Documentation</div>
+    <ul>
+      <li>
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.skhu.bobinlee.skhuapp&hl=ko">App Store</a>
+      </li>
+      <li>
+        <a target="_blank"
+           href="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fdoc%2D0o%2D1c%2Ddocs%2Egoogleusercontent%2Ecom%3A443%2Fdocs%2Fsecuresc%2Fotfgnpcc7gm3hn20ncstqreoeji1ubda%2F2993s278ruqkvp78mh1h7ffjq93b5f45%2F1432533600000%2F18300866968699729648%2F18300866968699729648%2F0B8XAh1SciE%2D9S2k3VElXdEZRVkE%3Fe%3Ddownload%26gd%3Dtrue%26access%5Ftoken%3Dya29%2EfgE%2DrdAj8x%2DnqtyXRJZN%2Dvzq0DaMhLXeOsKqdDcGJLhJfd5dnqI%5F9%2D9EK9%2DKgJL9YhrAsfdLqXIF0g&wdAr=1.7777777777777777">Presentation</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/BoBinLee/SkhuApp">Android - Source</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/BoBinLee/Skhu.Server">Server - Source</a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://drive.google.com/folderview?id=0B8XAh1SciE-9flc4TFhYajN2ZFJOVlJud1FlSElfTjFwNU9rMER2MDI3NnlKeWg2VVRHNlE&usp=sharing">Archive</a>
+      </li>
+    </ul>
+
+    <div class="reference">Reference</div>
+    <p>
+      Android - Android Pull To Refresh, Android ViewPagerIndicator, HTTP ( Android-Async-Http ), Image Processor
+      ( Picasso ), Facebook Graph API, Json ( Gson ), Time ( Joda Time ), GCM <br/>
+      Server - Spring Framework, MyBatis, HTML Parser ( Jsoup ), Json ( Jackson JSON Processor ), Multi Thread (
+      Quartz Framework ), Time ( Joda Time ), Test ( JUnit ), GCM Server <br/>
+      DB - MariaDB
+    </p>
+  </div>
 </div>
 </body>
 </html>
