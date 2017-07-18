@@ -5,7 +5,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-image: url('/images/bg.png');
+  background-image: url('/public/images/bg.png');
   /*overflow:hidden;*/
 }
 
