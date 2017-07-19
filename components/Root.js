@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import BoBinLee from './BoBinLee';
+import Intro from './Intro/Intro';
+import Blog from './Blog/Blog';
 
 const propTypes = {};
 
@@ -14,7 +18,9 @@ class Root extends Component {
 
   render() {
     return (
-      <div>Root</div>
+      <BrowserRouter>
+        <BoBinLee />
+      </BrowserRouter>
     );
   }
 }

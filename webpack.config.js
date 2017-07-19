@@ -1,5 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
+// markdown conver to html
+var marked = require("marked");
+var renderer = new marked.Renderer();
 
 module.exports = {
   devtool: 'source-map',
@@ -10,8 +13,8 @@ module.exports = {
     ]
   },
   output: {
+    filename: 'app.js',
     path: path.resolve(__dirname, './public'),
-    filename: 'app.js'
   },
 
   devServer: {
@@ -49,6 +52,10 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg|gif|eot|ttf|woff|woff2)$/,
+        loader: 'file-loader'
       }
     ],
   },

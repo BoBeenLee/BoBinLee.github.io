@@ -1,0 +1,18 @@
+$textColor: #EEE;
+$backgroundColor: #3F51B5;
+
+* {
+
+}
+
+.menu-container {
+  position: fixed;
+  width: 100%;
+  background-color: $backgroundColor !important;
+  opacity: 0.8 !important;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  .menu {
+    color: $textColor;
+    text-decoration: none;
+  }
+}

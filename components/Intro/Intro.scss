@@ -1,0 +1,30 @@
+@import '../BoBinLee';
+
+$intro1Height : 100px;
+$intro1Width : 100px;
+
+.parallax {
+  background-image: url('../../public/img/intro-1.jpg');
+  height: 900px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.intro-1 {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  color: $textColor;
+  font-size: x-large;
+  text-align: center;
+  background-color: transparent;
+}
+
+.intro-2 {
+  padding: 5rem 5rem;
+}
