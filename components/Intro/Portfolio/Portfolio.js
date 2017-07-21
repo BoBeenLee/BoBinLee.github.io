@@ -25,7 +25,7 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       loading: false,
-      stepIndex: 2,
+      stepIndex: 0,
     };
   }
 
