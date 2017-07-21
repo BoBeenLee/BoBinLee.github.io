@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import GitHubIcon from './github.svg';
+import GitHubIcon from '../../../public/img/Github.svg';
 
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
 import {CommunicationEmail} from 'material-ui/svg-icons/index';

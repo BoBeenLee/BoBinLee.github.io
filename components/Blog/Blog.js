@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {
-  Card, CardHeader, CardText, List, ListItem,
+  List,
   RaisedButton,
 } from 'material-ui';
 import _ from 'lodash';
-import moment from 'moment';
 import './Blog.scss';
+import BlogCard from './BlogCard';
 
 const propTypes = {
   rssUrl: PropTypes.string,
@@ -48,22 +48,7 @@ class Blog extends Component {
 
   render() {
     const { blogUrl } = this.props;
-    const articles = this.state.articles.map(article => {
-      const title = (<a href={article.link} className="blog-title">{article.title}</a>);
-      const date = (<div className="blog-date">{moment(article.date).format('YYYY-MM-DD HH:mm:ss')}</div>);
-      const description = (<div dangerouslySetInnerHTML={{__html: article.description}}></div>);
-      return (
-        <Card key={article.guid} className="blog-card">
-          <CardHeader
-            title={title}
-            subtitle={date}
-            showExpandableButton={true}
-          />
-          <CardText className="blog-card-content" expandable={true}>
-            {description}
-          </CardText>
-        </Card>)
-    });
+    const articles = this.state.articles.map(article => <BlogCard key={article.guid} article={article} />);
     return (
       <div className="blog">
         <List>

@@ -71,9 +71,9 @@ class BoBinLee extends Component {
               <Link to="/intro" className="menu">
                 <ToolbarTitle text="Intro"/>
               </Link>
-              <Link to="/activity" className="menu">
-                <ToolbarTitle text="Act."/>
-              </Link>
+              {/*<Link to="/activity" className="menu">*/}
+                {/*<ToolbarTitle text="Act."/>*/}
+              {/*</Link>*/}
               <Link to="/blog" className="menu">
                 <ToolbarTitle text="Blog"/>
               </Link>
