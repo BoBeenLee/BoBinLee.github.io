@@ -1,12 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import marked from 'marked';
-
-const propTypes = {};
-
-const defaultProps = {};
-
-const content = `
 Career
 --------
 * 2012.7 국군지휘통신사령부 합동상호운용성센터 소프트웨어관리병 근무
@@ -30,16 +21,3 @@ ETC
  * a week
 * [Thenx](https://www.youtube.com/watch?v=iqBAR0rfjiI)
  * two times a week
-`;
-
-const Career = () => {
-  return (
-    <div dangerouslySetInnerHTML={{__html: marked(content)}}>
-    </div>
-  );
-};
-
-Career.propTypes = propTypes;
-Career.defaultProps = defaultProps;
-
-export default Career;

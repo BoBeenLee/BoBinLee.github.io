@@ -1,7 +1,12 @@
 .portfolio {
-  height: 800px;
-
+  margin: 10px 0;
   .portfolio-stepper {
     width: 700px;
+  }
+  .portfolio-content {
+    margin: 0 16px;
+  }
+  .portfolio-button {
+    text-align: center;
   }
 }

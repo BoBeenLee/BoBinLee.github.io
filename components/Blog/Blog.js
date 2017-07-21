@@ -9,11 +9,13 @@ import moment from 'moment';
 import './Blog.scss';
 
 const propTypes = {
-  url: PropTypes.string,
+  rssUrl: PropTypes.string,
+  blogUrl: PropTypes.string
 };
 
 const defaultProps = {
-  url: 'http://cultist-tp.tistory.com/rss',
+  rssUrl: 'http://cultist-tp.tistory.com/rss',
+  blogUrl : 'http://cultist-tp.tistory.com',
 };
 
 class Blog extends Component {
@@ -29,8 +31,8 @@ class Blog extends Component {
   }
 
   requestTistoryRSS = () => {
-    const { url } = this.props;
-    feednami.load(url, (res) => {
+    const { rssUrl } = this.props;
+    feednami.load(rssUrl, (res) => {
       const articles = _.map(res.feed.entries, article => {
         return {
           guid : article.guid,
@@ -45,7 +47,7 @@ class Blog extends Component {
   };
 
   render() {
-    const { url } = this.props;
+    const { blogUrl } = this.props;
     const articles = this.state.articles.map(article => {
       const title = (<a href={article.link} className="blog-title">{article.title}</a>);
       const date = (<div className="blog-date">{moment(article.date).format('YYYY-MM-DD HH:mm:ss')}</div>);
@@ -66,7 +68,7 @@ class Blog extends Component {
       <div className="blog">
         <List>
           {articles}
-          <RaisedButton href={url} label="More" primary className="blog-more-button" />
+          <RaisedButton href={blogUrl} label="More" primary className="blog-more-button" />
         </List>
       </div>
     );

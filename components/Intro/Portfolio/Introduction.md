@@ -1,12 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import marked from 'marked';
-
-const propTypes = {};
-
-const defaultProps = {};
-
-const content = `
 BoBinLee 
 ========
 Educations
@@ -39,16 +30,3 @@ Technical Skills
  * SourceTree
  * Zeplin
  * Postman
-`;
-
-const Introduction = () => {
-  return (
-    <div dangerouslySetInnerHTML={{__html: marked(content)}}>
-    </div>
-  );
-};
-
-Introduction.propTypes = propTypes;
-Introduction.defaultProps = defaultProps;
-
-export default Introduction;

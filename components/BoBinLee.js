@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {
-  AppBar, Avatar, Toolbar, ToolbarGroup, ToolbarSeparator,
+  Avatar, Toolbar, ToolbarGroup, ToolbarSeparator,
   ToolbarTitle,
 } from 'material-ui';
 import {MuiThemeProvider} from 'material-ui/styles/index';
-import {cyan500, indigo900} from 'material-ui/styles/colors';
+import {cyan500, indigo900, teal500, teal300} from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {Link, Route, Switch} from 'react-router-dom';
 import update from 'react-addons-update';
@@ -20,7 +20,9 @@ const defaultProps = {};
 
 const bobinleeTheme = getMuiTheme({
   palette: {
-    textColor: indigo900,
+    textColor: teal500,
+    primary1Color: teal500,
+    primary2Color: teal300,
   },
 });
 
@@ -57,7 +59,7 @@ class BoBinLee extends Component {
     return (
       <MuiThemeProvider muiTheme={ bobinleeTheme }>
         <div>
-          <Toolbar className="menu-container">
+          <Toolbar className="menu-box">
             <ToolbarGroup>
               <a href={user.github_url}>
                 <Avatar

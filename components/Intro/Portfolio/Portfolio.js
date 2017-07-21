@@ -9,10 +9,12 @@ import {
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import ExpandTransition from 'material-ui/internal/ExpandTransition';
+import marked from 'marked';
+import Introduction from './Introduction.md';
+import Career from './Career.md';
+import Production from './Production.md';
+import 'github-markdown-css';
 import './Portfolio.scss';
-import Introduction from './Introduction';
-import Career from './Career';
-import Production from './Production';
 
 const propTypes = {};
 
@@ -23,8 +25,7 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       loading: false,
-      finished: false,
-      stepIndex: 2,
+      stepIndex: 0,
     };
   }
 
@@ -46,55 +47,46 @@ class Portfolio extends Component {
   getStepContent = (stepIndex) => {
     switch (stepIndex) {
       case 0:
-        return <Introduction />;
+        return Introduction;
       case 1:
-        return <Career />;
+        return Career;
       case 2:
-        return <Production />;
+        return Production;
       default:
         return 'You\'re a long way from home sonny jim!';
     }
-  }
+  };
 
   componentDidMount() {}
 
   renderContent = () => {
-    const { finished, stepIndex } = this.state;
-    const contentStyle = { margin: '0 16px' };
+    const { stepIndex } = this.state;
 
-    return (<div style={contentStyle}>
-      {finished ? (
-        <p>
-          <a
-            href="#"
-            onClick={(event) => {
-              event.preventDefault();
-              this.setState({ stepIndex: 0, finished: false });
-            }}
-          >
-            Click here
-          </a> to reset the example.
-        </p>
-      ) : (
-        <div>
-          <p>{this.getStepContent(stepIndex)}</p>
-          <div style={{ marginTop: 12 }}>
-            <FlatButton
-              label="Back"
-              disabled={stepIndex === 0}
-              onTouchTap={this.handlePrev}
-              style={{ marginRight: 12 }}
-            />
-            <RaisedButton
-              label={stepIndex === 2 ? 'Finish' : 'Next'}
-              primary={true}
-              onTouchTap={this.handleNext}
-            />
-          </div>
-        </div>
-      )}
+    const prevButton = (<FlatButton
+      label="Back"
+      disabled={stepIndex === 0}
+      onTouchTap={this.handlePrev}
+      style={{ marginRight: 12 }}
+    />);
+    const nextButton = (<RaisedButton
+      label={stepIndex === 2 ? 'Finish' : 'Next'}
+      primary
+      onTouchTap={this.handleNext}
+    />);
+    const stepButton = (<div style={{ marginTop: 12 }}>
+      {stepIndex > 0 ? prevButton : ''}
+      {stepIndex <= 1 ? nextButton : ''}
     </div>);
-  }
+    const content = this.getStepContent(stepIndex);
+
+    return (<div className="portfolio-content">
+      <div className="markdown-body" dangerouslySetInnerHTML={{__html: marked(content)}}>
+      </div>
+      <div className="portfolio-button">
+        {stepButton}
+      </div>
+    </div>);
+  };
 
   render() {
     const { loading, stepIndex } = this.state;
