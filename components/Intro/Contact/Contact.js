@@ -3,14 +3,18 @@ import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import GitHubIcon from '../../../public/img/Github.svg';
 
-import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
+import {
+  BottomNavigation,
+  BottomNavigationItem,
+} from 'material-ui/BottomNavigation';
 import {CommunicationEmail} from 'material-ui/svg-icons/index';
 import {CommunicationForum} from 'material-ui/svg-icons/index';
 import Paper from 'material-ui/Paper';
 import './Contact.scss';
 
 const emailIcon = <CommunicationEmail />;
-const githubIcon = <img height={24} style={{marginBottom: 2}} src={GitHubIcon} alt="github" /> ; // <IconButton iconClassName="muidocs-icon-custom-github" />;
+const githubIcon = <img height={24} style={{ marginBottom: 2 }} src={GitHubIcon}
+                        alt="github"/>; // <IconButton iconClassName="muidocs-icon-custom-github" />;
 const forumIcon = <CommunicationForum />;
 
 const propTypes = {};
@@ -25,30 +29,33 @@ class Contact extends Component {
     };
   }
 
-  select = (index) => this.setState({selectedIndex: index});
+  select = (index, url) => {
+    window.open(url, '_blank');
+    this.setState({ selectedIndex: index });
+  };
 
   componentDidMount() {}
 
   render() {
     return (
       <div>
-        <FontIcon className="muidocs-icon-action-home" />
+        <FontIcon className="muidocs-icon-action-home"/>
         <Paper zDepth={1}>
           <BottomNavigation selectedIndex={this.state.selectedIndex}>
             <BottomNavigationItem
               label="Email"
               icon={emailIcon}
-              onTouchTap={() => this.select(0)}
+              onTouchTap={() => this.select(0, 'mailto:globaldev@naver.com')}
             />
             <BottomNavigationItem
               label="Github"
               icon={githubIcon}
-              onTouchTap={() => this.select(1)}
+              onTouchTap={() => this.select(1, 'https://github.com/BoBinLee')}
             />
             <BottomNavigationItem
               label="Tistory"
               icon={forumIcon}
-              onTouchTap={() => this.select(2)}
+              onTouchTap={() => this.select(2, 'http://cultist-tp.tistory.com')}
             />
           </BottomNavigation>
         </Paper>
