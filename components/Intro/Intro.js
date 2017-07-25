@@ -23,7 +23,7 @@ class Intro extends Component {
       <div>
         <div className="parallax">
           <div className="intro-1">
-            Simple is Best
+            Always Awake
           </div>
         </div>
         <Portfolio />
