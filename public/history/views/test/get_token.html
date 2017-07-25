@@ -3,7 +3,7 @@
     <title>Tistory OAuth 2.0 Sample - Example Implicit Grant </TITLE>
 </head>
 
-<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
 <script>
     if (window.location.hash) {
@@ -16,7 +16,7 @@
 
                 $scope.getToken = function () {
                     var reqPo = {"client_id": "2e9ed0c88441f79c35f62149e70a990a",
-                        "redirect_uri": "http://localhost:9000/views/get_token.html",
+                        "redirect_uri": "http://localhost:63342/views/get_token.html",
                         "response_type": "token"
                     };
 //                    $scope.data = "https://www.tistory.com/oauth/authorize?" + JSON.stringify(reqPo);
