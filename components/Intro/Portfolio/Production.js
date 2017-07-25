@@ -20,7 +20,18 @@ const settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+};
+
+const styles = {
+  chip: {
+    marginLeft: 8,
+    marginTop: -5
+  },
+  wrapper: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
 };
 
 class Production extends Component {
@@ -29,21 +40,15 @@ class Production extends Component {
   }
 
   componentDidMount() {}
-
   render() {
-
+    const productions = [
+      SwHome, Competition, SkhuAlarm, House, Team42, Taiger,
+      Intersection, OnePage, Flass ]
+    .map((Component, index) => <Component key={`production${index}`} settings={settings} styles={styles} />);
     return (
       <div>
         <h2>Production</h2>
-        <SwHome settings={settings} />
-        <Competition settings={settings} />
-        <SkhuAlarm settings={settings} />
-        <House settings={settings} />
-        <Team42 />
-        <Taiger />
-        <Intersection settings={settings} />
-        <OnePage />
-        <Flass />
+        {productions}
       </div>
     );
   }

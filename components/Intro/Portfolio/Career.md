@@ -10,11 +10,11 @@ Activity
 * [Nexters](http://teamnexters.com/) 5기
  * -ing
 * [Github](https://github.com/BoBinLee)
- * every day
+ * -ing
 * [Tistory](http://cultist-tp.tistory.com/)
  * sometimes
 
-ETC
+Hobby
 --------
 * [RRR](https://www.instagram.com/runrabbitrun_seoul/)
  * a week

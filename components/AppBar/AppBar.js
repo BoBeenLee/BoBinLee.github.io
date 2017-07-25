@@ -40,7 +40,7 @@ class AppBar extends Component {
   };
 
   redirectPrevHome = () => {
-    location.href = '/history/index.html';
+    location.href = 'history/index.html';
   }
 
   render() {

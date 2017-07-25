@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import Slider  from 'react-slick';
+import {Chip, Divider} from 'material-ui';
 
 const propTypes = {};
 
 const defaultProps = {};
 
-const imageUrls = [
+const IMAGE_NAMES = [
   'main.png',
   'board.png',
   'commentmng.png',
@@ -23,17 +24,39 @@ const imageUrls = [
   'writeqna.png'
 ];
 
-const Competition = (props) => {
-  const { settings } = props;
-  const images = imageUrls.map(url => <div><img width="800" style={{margin:"auto"}} src={`img/competition/${url}`} /></div> );
+const SKILLS = ['Bootstrap', 'AngularJS', 'LessJS', 'jQuery', 'Spring Framework', 'Tiles', 'MyBatis', 'MariaDB'];
 
+const Competition = (props) => {
+  const { settings, styles } = props;
+  const images = IMAGE_NAMES.map((url, index) => (
+    <div key={`competition${index}`}>
+      <img height="500"
+           style={{ margin: 'auto' }}
+           src={`img/competition/${url}`}/>
+    </div>));
+  const chips = SKILLS.map((skill, index) => (
+    <Chip key={`skill${index}`} style={styles.chip}>
+      {skill}
+    </Chip>));
+  const header = (
+    <span>
+      <b>경진대회 시스템</b>
+      <a href="https://github.com/BoBinLee/SkhuCompetition.Server"
+         style={{ marginLeft: 10 }}>
+        <img src="img/Github.svg" width="30"
+             style={{ verticalAlign: 'middle' }}/>
+      </a>
+    </span>);
   return (
     <Card>
       <CardHeader
-        title={ <h4 style={{marginTop: 5}}>경진대회 시스템</h4> }
-        subtitle={ <a href="https://github.com/BoBinLee/SkhuCompetition.Server"><img src="img/Github.svg" width="30" /></a> }
+        title={ header }
         showExpandableButton={true}
       />
+      <CardText>
+        <div style={styles.wrapper}>{chips}</div>
+      </CardText>
+      <Divider />
       <CardText expandable={true}>
         <Slider {...settings}>
           {images}
