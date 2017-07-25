@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 import {Divider, Paper} from 'material-ui';
 import {
   Step,
@@ -12,7 +13,7 @@ import ExpandTransition from 'material-ui/internal/ExpandTransition';
 import marked from 'marked';
 import Introduction from './Introduction.md';
 import Career from './Career.md';
-import Production from './Production.md';
+import Production from './Production';
 import 'github-markdown-css';
 import './Portfolio.scss';
 
@@ -25,7 +26,7 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       loading: false,
-      stepIndex: 0,
+      stepIndex: 2,
     };
   }
 
@@ -47,11 +48,11 @@ class Portfolio extends Component {
   getStepContent = (stepIndex) => {
     switch (stepIndex) {
       case 0:
-        return Introduction;
+        return (<div className="markdown-body" dangerouslySetInnerHTML={{__html: marked(Introduction)}}></div>);
       case 1:
-        return Career;
+          return (<div className="markdown-body" dangerouslySetInnerHTML={{__html: marked(Career)}}></div>);
       case 2:
-        return Production;
+        return <Production />;
       default:
         return 'You\'re a long way from home sonny jim!';
     }
@@ -80,8 +81,7 @@ class Portfolio extends Component {
     const content = this.getStepContent(stepIndex);
 
     return (<div className="portfolio-content">
-      <div className="markdown-body" dangerouslySetInnerHTML={{__html: marked(content)}}>
-      </div>
+      {content}
       <div className="portfolio-button">
         {stepButton}
       </div>

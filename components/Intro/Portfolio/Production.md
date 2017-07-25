@@ -1,7 +1,7 @@
 Production
 --------
 
-* #### 학과 홈페이지
+* #### 학과 홈페이지 
   [<img src="img/Github.svg" width="30" />](https://github.com/BoBinLee/swhome)
 * #### 경진대회 시스템
   [<img src="img/Github.svg" width="30" />](https://github.com/BoBinLee/SkhuCompetition.Server)
