@@ -26,7 +26,7 @@ const imageUrls = [
 
 const House = (props) => {
   const { settings } = props;
-  const images = imageUrls.map(url => <div><img src={`img/house/${url}`} /></div> );
+  const images = imageUrls.map(url => <div><img width="300" style={{margin:"auto"}} src={`img/house/${url}`} /></div> );
 
   return (
     <Card>
