@@ -18,7 +18,7 @@ const imageUrls = [
 
 const Intersection = (props) => {
   const { settings } = props;
-  const images = imageUrls.map(url => <div><img width="300" style={{margin:"auto"}} src={`/img/intersection/${url}`} /></div> );
+  const images = imageUrls.map(url => <div><img width="300" style={{margin:"auto"}} src={`img/intersection/${url}`} /></div> );
 
   return (
     <Card>

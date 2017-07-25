@@ -25,7 +25,7 @@ const imageUrls = [
 
 const Competition = (props) => {
   const { settings } = props;
-  const images = imageUrls.map(url => <div><img width="800" style={{margin:"auto"}} src={`/img/competition/${url}`} /></div> );
+  const images = imageUrls.map(url => <div><img width="800" style={{margin:"auto"}} src={`img/competition/${url}`} /></div> );
 
   return (
     <Card>

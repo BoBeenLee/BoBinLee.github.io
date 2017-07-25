@@ -20,7 +20,7 @@ const imageUrls = [
 
 const SwHome = (props) => {
   const { settings } = props;
-  const images = imageUrls.map(url => <div><img width="800" style={{margin:"auto"}} src={`/img/softhome/${url}`} /></div> );
+  const images = imageUrls.map(url => <div><img width="800" style={{margin:"auto"}} src={`img/softhome/${url}`} /></div> );
 
   return (
     <Card>

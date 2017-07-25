@@ -20,7 +20,7 @@ const imageUrls = [
 
 const SkhuAlarm = (props) => {
   const { settings } = props;
-  const images = imageUrls.map(url => <div><img width="300" style={{margin:"auto"}} src={`/img/skhualarm/${url}`} /></div> );
+  const images = imageUrls.map(url => <div><img width="300" style={{margin:"auto"}} src={`img/skhualarm/${url}`} /></div> );
 
   return (
     <Card>
