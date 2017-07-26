@@ -9,15 +9,16 @@ Technical Skills
 * Front-End
  * JS : ReactJS, jQuery, ES6 
  * CSS : Less, SASS
-* Mobile
- * Android
 * Back-End
  * Spring Framework, Spring Boot
  * NodeJS - Express
+* Mobile
+  * Android
 * DB
- * RDB ( MySQL, MariaDB, PostgreSQL ), MongoDB
+ * RDB ( MySQL, MariaDB, PostgreSQL )
+ * MongoDB
 * Collaboration
- * Slack, JIRA, Github, Trello, TeamViewer
+ * Slack, Atlassian JIRA, WIKI, Github, Trello, TeamViewer
 * Usage
  * AWS
    * EC2, S3, RDS, ELB, Auto Scaling
@@ -29,3 +30,4 @@ Technical Skills
  * SourceTree
  * Zeplin
  * Postman
+ * Jmeter
