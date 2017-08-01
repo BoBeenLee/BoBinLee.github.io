@@ -34,7 +34,8 @@ const SkhuAlarm = (props) => {
   const { settings, styles } = props;
   const images = imageUrls.map((url, index) => (
     <div key={`skhualarm${index}`}>
-      <img width="300" style={{ margin: 'auto' }}
+      <img width="300"
+           style={{ margin: '10px auto' }}
            src={`img/skhualarm/${url}`}/>
     </div>));
   const chips = SKILLS.map((skill, index) => (

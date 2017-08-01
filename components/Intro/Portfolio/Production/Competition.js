@@ -31,7 +31,7 @@ const Competition = (props) => {
   const images = IMAGE_NAMES.map((url, index) => (
     <div key={`competition${index}`}>
       <img height="500"
-           style={{ margin: 'auto' }}
+           style={{ margin: '10px auto' }}
            src={`img/competition/${url}`}/>
     </div>));
   const chips = SKILLS.map((skill, index) => (

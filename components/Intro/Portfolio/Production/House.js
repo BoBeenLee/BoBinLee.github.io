@@ -36,7 +36,9 @@ const House = (props) => {
   const { settings, styles } = props;
   const images = IMAGE_NAMES.map((url, index) => (
     <div key={`house${index}`}>
-      <img width="300" style={{ margin: 'auto' }} src={`img/house/${url}`}/>
+      <img width="300"
+           style={{ margin: '10px auto' }}
+           src={`img/house/${url}`}/>
     </div>));
   const chips = SKILLS.map((skill, index) => (
     <Chip key={`skill${index}`} style={styles.chip}>
