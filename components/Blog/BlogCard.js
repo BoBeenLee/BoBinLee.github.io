@@ -3,40 +3,32 @@ import PropTypes from 'prop-types';
 import {
   Card, CardHeader, CardText
 } from 'material-ui';
+import _ from 'lodash';
 import moment from 'moment';
 import './BlogCard.scss';
 
 const propTypes = {
-  article : PropTypes.object,
+  article : PropTypes.object.isRequired,
+  toggleDetail: PropTypes.func.isRequired,
 };
 
-const defaultProps = {
-
-};
+const defaultProps = {};
 
 class BlogCard extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      showDetails : false
-    };
   }
 
   componentDidMount() {}
 
-  handleExpandChange = () => {
-    this.setState({ showDetails: !this.state.showDetails });
-  };
-
   render() {
-    const { article } = this.props;
+    const { article, toggleDetail } = this.props;
     const title = (<a href={article.link} className="blog-title">{article.title}</a>);
     const date = (<div className="blog-date">{moment(article.date).format('YYYY-MM-DD HH:mm:ss')}</div>);
     const description = (<div dangerouslySetInnerHTML={{__html: article.description}}></div>);
-    const { showDetails } = this.state;
     return (
       <div>
-        <Card className="blog-card" onExpandChange={this.handleExpandChange}>
+        <Card className="blog-card" onExpandChange={_.partial(toggleDetail, article.guid)}>
           <CardHeader
             title={title}
             subtitle={date}

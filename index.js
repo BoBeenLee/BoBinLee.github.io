@@ -15,13 +15,6 @@ const render = Component => {
   console.log('init() :: App starts booting...');
   injectTapEventPlugin();
 
-  // Check for devToolsExtension
-  const create = window.devToolsExtension ? window.devToolsExtension()(
-    createStore) : createStore;
-
-  // Apply thunk and additional middleware if applicable
-  const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(create);
-
   FireBaseConfig.init();
 
   ReactDOM.render(

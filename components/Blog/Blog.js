@@ -4,7 +4,8 @@ import {
   List,
   RaisedButton,
 } from 'material-ui';
-import _ from 'lodash';
+import {observer, inject} from "mobx-react";
+import {observable, autorun, action} from "mobx";
 import './Blog.scss';
 import BlogCard from './BlogCard';
 
@@ -18,37 +19,26 @@ const defaultProps = {
   blogUrl : 'http://cultist-tp.tistory.com',
 };
 
+@inject('blogStore')
+@observer
 class Blog extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      articles: []
-    };
+  }
+
+  handleToggleDetail = (guid) => {
+    this.props.blogStore.toggleDetail(guid);
   }
 
   componentDidMount() {
-    this.requestTistoryRSS();
-  }
-
-  requestTistoryRSS = () => {
     const { rssUrl } = this.props;
-    feednami.load(rssUrl, (res) => {
-      const articles = _.map(res.feed.entries, article => {
-        return {
-          guid : article.guid,
-          title : article.title,
-          link : article.link,
-          date : article.date,
-          description: article.description,
-        };
-      });
-      this.setState({articles});
-    });
-  };
+    this.props.blogStore.requestTistoryRSS(rssUrl);
+  }
 
   render() {
     const { blogUrl } = this.props;
-    const articles = this.state.articles.map(article => <BlogCard key={article.guid} article={article} />);
+    const articles = this.props.blogStore.articles.map(article =>
+      <BlogCard key={article.guid} article={article} toggleDetail={this.handleToggleDetail} />);
     return (
       <div className="blog">
         <List>

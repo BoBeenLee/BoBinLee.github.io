@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { Provider } from 'mobx-react';
 import BoBinLee from './BoBinLee';
-import Intro from './Intro/Intro';
-import Blog from './Blog/Blog';
+import blogStore from '../stores/blogsStore';
 
 const propTypes = {};
-
 const defaultProps = {};
+
+const stores = {
+  blogStore,
+};
 
 class Root extends Component {
   constructor(props) {
@@ -18,9 +20,11 @@ class Root extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <BoBinLee />
-      </BrowserRouter>
+      <Provider {...stores}>
+        <BrowserRouter>
+          <BoBinLee />
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
